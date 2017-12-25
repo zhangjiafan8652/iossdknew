@@ -1,0 +1,582 @@
+api 接口
+
+
+请求地址：https://api.kingoo.com.cn/
+
+
+
+--激活回调
+
+data/active_handler/
+
+请求方式
+
+POST
+
+参数
+
+app_id  234234234
+imei  8632349466433245
+cur_ver   2.0.1
+idfa
+
+返回
+
+toggle 0=不切换支付 1=切换支付 2=切换登录 3=切换登录与支付
+
+{
+  "err_code": 0,
+  "err_msg": "success",
+  "data":{
+	"toggle":0
+  }
+}
+
+
+--支付信息接口（判断是否需要切换支付和打折）
+
+data/payinfo/
+
+请求方式
+
+POST
+
+参数
+
+app_id     平台游戏id
+uid        平台UID
+token      平台TOKEN
+app_ver    客户端版本号
+role_level 角色等级
+
+返回
+
+toggle 不为0时表示切换支付
+per    表示打折信息，95表示 九五折
+per_allowed 为允许打折的支付方式
+
+返回示例
+
+{"err_code":0,"err_msg":"success","data":{"toggle":1,"per":95,"per_allowed":[36,37]}}
+
+
+
+--登录、注册回调
+
+data/login_handler/
+
+请求方式
+
+POST
+
+参数
+
+app_id
+uid 渠道uid
+imei
+idfa
+
+返回
+
+{
+  "err_code": 0,
+  "err_msg": "success",
+  "data": {
+    "uid": "11810689810218760082",
+    "username": "A269496107",
+    "icon": "http://oq6vthzm9.bkt.clouddn.com/u/icon/2017/05/445c083c24.jpg",
+    "last_login": "2017-05-22 09:14:28",
+    "token": "06fb04f30fbfc7605388aac70f3b1ae8",
+    "rand_code": "523064"
+  }
+}
+
+
+
+
+--支付回调
+
+data/pay_handler/
+
+请求方式
+
+POST
+
+参数
+
+app_id
+uid
+amount 金额，单位分
+remark 透传参数或者说扩展参数
+transid cp订单号
+username 用户名
+
+返回
+
+{
+  "err_code": 0,
+  "err_msg": "success",
+  "data":{
+	"id":"070523727923477294"//平台订单号
+  }
+}
+
+
+
+--公告接口
+
+data/notice/
+
+请求方式
+
+POST
+
+参数
+
+appid
+
+返回
+
+{
+  "err_code": 0,
+  "err_msg": "success",
+  "data": "<p>游戏公告</p>"
+}
+
+
+--更新接口
+
+data/update/
+
+请求方式
+
+POST
+
+参数
+
+appid
+versioncode
+
+返回
+
+status 1提示更新  2强制更新
+full_url 更新包地址
+full_size 包大小 字节数
+note 更新说明
+
+{
+  "err_code": 0,
+  "err_msg": "success",
+  "data": {
+    "game_id": "2701103496",
+    "versioncode": 10,
+    "versionname": "1.0",
+    "full_url": "http://d.apps.yayawan.com/apk/blcm/blcm35-0803.apk",
+    "full_size": 105940230,
+    "note": "安全性更新\r\n优化用户体验",
+    "status": 2,
+    "create_time": "2017-06-05 12:24:18",
+    "update_time": 0
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--自动注册接口
+
+POST
+
+user/auto_register/
+
+参数
+
+app_id
+imei
+
+返回
+
+{
+  "err_code": 0,
+  "err_msg": "success",
+  "data": {
+    "mobile": 0,
+    "username": "A269496107",
+    "sex": 0,
+    "device_imei": 0,
+    "game_id": "1965363965",
+    "chs_id": "2602046265",
+    "mobile_valid": 0,
+    "status": 1,
+    "id": "11810689810218760082",
+    "reg_time": "2017-05-20 14:13:43",
+    "token": "950a47872a5c96116386e67fdbae2e75",
+    "password": 201619,
+	"rand_code": "523064"
+  }
+}
+
+
+
+
+
+--普通注册接口
+
+POST
+
+user/register/
+
+参数
+
+app_id
+imei
+Idfa
+username    长度为6~16个字符
+password    长度为6~16个字符
+
+返回
+
+{
+  "err_code": 0,
+  "err_msg": "success",
+  "data": {
+    "mobile": 0,
+    "username": "weisuiyu",
+    "sex": 0,
+    "game_id": "1965363965",
+    "chs_id": "2602046265",
+    "mobile_valid": 0,
+    "status": 1,
+    "id": "12079381336452444860",
+    "reg_time": "2017-05-20 13:40:27",
+	"token": "950a47872a5c96116386e67fdbae2e75",
+	"rand_code": "523064"
+  }
+}
+
+
+--发送短信验证码接口
+
+POST
+
+user/sendcode/
+
+参数
+
+mobile
+type   1为忘记密码  2为注册
+
+返回
+
+{
+  "err_code": 0,
+  "err_msg": "success"
+}
+
+
+
+--手机号注册接口
+
+POST
+
+user/mobile_register/
+
+参数
+
+app_id
+imei
+mobile    手机号
+password    长度为6~16个字符
+code       验证码
+
+返回
+
+{
+  "err_code": 0,
+  "err_msg": "success",
+  "data": {
+    "mobile": 18665013140,
+    "username": "18665013140",
+    "sex": 0,
+    "game_id": "1965363965",
+    "chs_id": "2602046265",
+    "mobile_valid": 0,
+    "status": 1,
+    "id": "12079381336452444860",
+    "reg_time": "2017-05-20 13:40:27",
+	"token": "950a47872a5c96116386e67fdbae2e75",
+	"rand_code": "523064"
+  }
+}
+
+
+--登录接口
+
+POST
+
+user/login/
+
+参数
+
+app_id
+username
+password
+
+返回
+
+{
+  "err_code": 0,
+  "err_msg": "success",
+  "data": {
+    "uid": "11810689810218760082",
+    "username": "A269496107",
+    "icon": "http://oq6vthzm9.bkt.clouddn.com/u/icon/2017/05/445c083c24.jpg",
+    "last_login": "2017-05-22 09:14:28",
+    "token": "06fb04f30fbfc7605388aac70f3b1ae8",
+    "rand_code": "523064"
+  }
+}
+
+
+
+
+--获取用户信息接口（token登录）
+
+POST
+
+user/userinfo/
+
+参数
+
+app_id
+uid
+token
+
+返回
+
+{
+  "err_code": 0,
+  "err_msg": "success",
+  "data": {
+    "uid": "11810689810218760082",
+    "username": "A269496107",
+    "icon": "http://oq6vthzm9.bkt.clouddn.com/u/icon/2017/05/445c083c24.jpg",
+    "last_login": "2017-05-22 09:55:19",
+    "token": "06fb04f30fbfc7605388aac70f3b1ae8",
+    "rand_code": "523064"
+  }
+}
+
+
+
+
+
+--随机码登录
+
+POST
+
+user/onecode_login/
+
+参数
+
+app_id
+mobile
+code    使用rand_code和时间生成的随机码
+
+返回
+
+{
+  "err_code": 0,
+  "err_msg": "success",
+  "data": {
+    "uid": "11810689810218760082",
+    "username": "A269496107",
+    "icon": "http://oq6vthzm9.bkt.clouddn.com/u/icon/2017/05/445c083c24.jpg",
+    "last_login": "2017-05-22 09:55:19",
+    "token": "06fb04f30fbfc7605388aac70f3b1ae8",
+    "rand_code": "523064"
+  }
+}
+
+
+
+
+--找回密码
+
+POST
+
+user/forget/
+
+参数
+
+app_id
+mobile
+code     验证码
+password   新密码
+
+返回
+
+{
+  "err_code": 0,
+  "err_msg": "success"
+}
+
+
+
+--上传头像
+
+POST
+
+user/upload_icon/
+
+参数
+
+app_id
+uid
+token
+
+文件上传的key为 upfile
+
+返回
+
+{
+  "err_code": 0,
+  "err_msg": "success",
+  "data":{
+	"url":"http://xxx.xxx.com/u/icon/24ad35fef.jpg"
+  }
+}
+
+
+
+
+--编辑用户信息
+
+POST
+
+user/userinfo_edit/
+
+参数
+
+app_id
+uid
+token
+nick
+sex     1男 2女
+
+返回
+
+{
+  "err_code": 0,
+  "err_msg": "success"
+}
+
+
+
+
+--实名信息
+
+POST
+
+user/relname/
+
+参数
+
+app_id
+uid
+token
+relname 真实名称
+creditno 身份证号码
+
+返回
+
+{
+  "err_code": 0,
+  "err_msg": "success"
+}
+
+
+
+
+--支付接口
+
+POST
+
+pay/init_pay/
+
+参数
+
+app_id
+uid
+token
+amount   金额，单位分
+pay_type  支付方式  1支付宝  2微信支付  3银联支付  36微信    37支付宝H5支付 
+ext   透传参数
+orderid  CP订单号
+
+示例：app_id=1965363965&uid=11810689810218760082&token=2eeff99cb80bddc523ea72ae0b4d79b1&amount=100&pay_type=1&ext=hkasd|345|12313123|aasdfgssddgg&orderid=2hkhkah54224234
+
+返回
+
+billid  平台订单号
+
+{
+  "err_code": 0,
+  "err_msg": "success",
+  "billid": "17052510162708045298",
+  "pstr": "partner=\"2088121928273395\"&out_trade_no=\"17052510162708045298\"&subject=\"天天飞车-极速凌云\"&body=\"17052510162708045298\"&total_fee=\"1\"&notify_url=\"http%3A%2F%2Fwww.will.com%2Fapi_web%2Fpay%2Fnotify%2F1%2F\"&service=\"mobile.securitypay.pay\"&_input_charset=\"UTF-8\"&payment_type=\"1\"&seller_id=\"18826265399@163.com\"&sign=\"JyRxHq8rbkERu0tyM58Rw43qBxsvwxmxwsUlC7j3F5Hx3J2c1XkEehgGegVqJn6kzTavO9jTwDycJsPBCjC6yC1g2SgER%2BZCCU6HW0rOM1y1PDlx6LvFg8%2BZwdT0rP9zpPXYmU%2BXYbZUJeApn1iT4%2Bm64UUY%2Bkv%2BRU6h2IWmtw4%3D\"&sign_type=\"RSA\""
+}
+
+
+--订单查询接口
+
+POST
+
+pay/order_status/
+
+参数
+
+app_id
+uid
+token
+billid   平台订单号
+
+返回
+
+status  订单状态  1支付失败  2支付成功，还未到账游戏币，3支付成功并已到帐
+
+{
+  "err_code": 0,
+  "err_msg": "支付失败",
+  "status": 1
+}
+
+
+
+附表
+
+错误码：
+
+'success'=>array('err_code'=>0,'err_msg'=>'success'),
+'errorparameter'=>array('err_code'=>11001,'err_msg'=>'请求参数错误'),
+'errorrequest'=>array('err_code'=>11002,'err_msg'=>'请求方式错误'),
+'nodata'=>array('err_code'=>11003,'err_msg'=>'无此类数据'),
+'codesenderror'=>array('err_code'=>11008,'err_msg'=>'验证码发送失败'),
+'mobilehasregister'=>array('err_code'=>11009,'err_msg'=>'此手机号已经被注册或已绑定其它帐号'),
+'servererror'=>array('err_code'=>11010,'err_msg'=>'服务器错误'),
+'mobilecodeerror'=>array('err_code'=>11011,'err_msg'=>'验证码错误'),
+'needlogin'=>array('err_code'=>11012,'err_msg'=>'请重新登录'),
+'nouser'=>array('err_code'=>11013,'err_msg'=>'无此用户'),
+'passworderror'=>array('err_code'=>11014,'err_msg'=>'密码错误'),
+'createbillerror'=>array('err_code'=>11015,'err_msg'=>'创建订单失败'),
+'creditnoerror'=>array('err_code'=>11016,'err_msg'=>'身份证号码不合法'),
