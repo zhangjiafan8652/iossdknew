@@ -9,10 +9,17 @@
 #import "DgameSdk.h"
 #import "StringConstants.h"
 
+@interface DgameSdk ()
 
+
+
+@end
 
 
 @implementation DgameSdk
+
+
+static BOOL isShowcenter=NO;
 
 static DgameSdk *mdgamesdk=nil;
 
@@ -33,7 +40,7 @@ static DgameSdk *mdgamesdk=nil;
 - (void) DgameOnlineHelperinitSDKWithListener:(id) delegate{
     _mInitdelegate=delegate;
     _mLogindelegate=delegate;
-    
+    _mPaydelegate=delegate;
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     ////发送二进制form数据 key=value&key2=value2
@@ -42,10 +49,10 @@ static DgameSdk *mdgamesdk=nil;
     manager.responseSerializer  = [AFJSONResponseSerializer serializer];
     NSString *IDFA=[[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     NSString *APPID=[NSBundle mainBundle].infoDictionary[@"ddappid"];
-    
+    NSString *app_Version = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
     [defaults setObject:APPID forKey:@"app_id"];
-    
+    [defaults setObject:app_Version forKey:@"app_version"];
     
     [defaults synchronize];//用synchronize方法把数据持久化到
     
@@ -67,7 +74,18 @@ static DgameSdk *mdgamesdk=nil;
         NSString *str=[KJSON objectForKey:@"err_msg"];
         NSLog(@"登录成功状态%@",str);
         if ([str isEqualToString:@"success"]) {
-            [self showFloatWindow];
+            
+            NSDictionary *data=[KJSON objectForKey:@"data"];
+            NSString *center_status=[data objectForKey:@"center_status"];
+            NSInteger center_statusint = [center_status integerValue];
+            //是否显示小手
+            if (center_statusint >1) {
+                isShowcenter=YES;
+                //[self startDouDouPay];
+            }else{
+                isShowcenter=NO;
+                //[ self startApplePay];
+            }
             
         }
         
@@ -78,7 +96,7 @@ static DgameSdk *mdgamesdk=nil;
         //failure(error);
     }];
   
-    
+    NSLog(@"调用初始化后");
     
     
 }
@@ -93,11 +111,12 @@ static DgameSdk *mdgamesdk=nil;
     manager.responseSerializer  = [AFJSONResponseSerializer serializer];
     NSString *IDFA=[[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     NSString *APPID=[NSBundle mainBundle].infoDictionary[@"ddappid"];
+    NSString *app_Version = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
     
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
     [defaults setObject:APPID forKey:@"app_id"];
     
-    
+    [defaults setObject:app_Version forKey:@"app_version"];
     [defaults synchronize];//用synchronize方法把数据持久化到
     
     [DgameUtils setNSUserDefaultskey:@"app_id" andValue:APPID];
@@ -118,7 +137,18 @@ static DgameSdk *mdgamesdk=nil;
         NSString *str=[KJSON objectForKey:@"err_msg"];
         NSLog(@"登录成功状态%@",str);
         if ([str isEqualToString:@"success"]) {
-            [self showFloatWindow];
+           
+            NSDictionary *data=[KJSON objectForKey:@"data"];
+            NSString *center_status=[data objectForKey:@"center_status"];
+            NSInteger center_statusint = [center_status integerValue];
+            //是否显示小手
+            if (center_statusint >1) {
+                
+                //[self startDouDouPay];
+            }else{
+                
+                //[ self startApplePay];
+            }
             
         }
         
@@ -130,6 +160,8 @@ static DgameSdk *mdgamesdk=nil;
     }];
     
 }
+
+//登陆账号
 - (void) login:(NSString *) remain{
     
     LoginViewController *loginView = [[LoginViewController alloc]init];
@@ -154,6 +186,112 @@ static DgameSdk *mdgamesdk=nil;
 
     
 }
+
+//支付方法
+-(void) pay:(int32_t) unitPrice andName:(NSString *) goodName andExtinfo:(NSString *) extinfo andOrderid:(NSString *) orderid withPayListener:(id) paydelegate{
+    _morder=[[DgameOrder alloc] init];
+    
+    _morder.price=&(unitPrice);
+    _morder.goodname=goodName;
+    _morder.orderid=orderid;
+    _morder.cpetc=extinfo;
+    _mPaydelegate=paydelegate;
+    
+    NSLog(@"订单信息：%@",_morder);
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    ////发送二进制form数据 key=value&key2=value2
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    ////响应二进制form数据
+    manager.responseSerializer  = [AFJSONResponseSerializer serializer];
+    
+    
+    NSString *appid=[DgameUtils getNSUserDefaultsBykey:@"app_id"];
+    
+    NSString *uid=[DgameUtils getNSUserDefaultsBykey:@"uid"];
+    NSString *token=[DgameUtils getNSUserDefaultsBykey:@"token"];
+    
+    NSString *app_ver=[DgameUtils getNSUserDefaultsBykey:@"app_version"];
+    NSString *role_level=[DgameSdk Instance].mRole.roleLevel;
+    
+    
+    
+    
+    // NSMutableDictionary *parameters = @{@"idfa":IDFA,@"app_id":APPID};
+    //  NSMutableDictionary *dic2 = [NSMutableDictionary dictionaryWithObjectsAndKeys:IDFA,@"idfa",APPID,@"app_id",nil];
+    NSLog(@"uid%@",uid);
+    NSLog(@"appid%@",appid);
+    NSLog(@"app_ver%@",app_ver);
+    NSLog(@"role_level%@",role_level);
+    NSLog(@"token%@",token);
+
+    NSLog(@"url%@",payinfourl);
+
+    NSDictionary *parametersDemo = @{@"uid":uid,@"app_id":appid,@"app_ver":app_ver,@"role_level":role_level,@"token":token};
+    [manager POST:payinfourl parameters:parametersDemo progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSLog(@"获取支付信息返回%@",responseObject);
+        NSDictionary *KJSON=(NSDictionary*)responseObject;
+        NSString *str=[KJSON objectForKey:@"err_msg"];
+        NSLog(@"获取支付信息返回%@",str);
+        if ([str isEqualToString:@"success"]) {
+            
+            NSDictionary *data=[KJSON objectForKey:@"data"];
+            NSString *toggle=[data objectForKey:@"toggle"];
+            NSInteger toggleint = [toggle integerValue];
+            //判断支付方式
+            if (toggleint==0) {
+                 [ self startApplePay];
+                
+            }else{
+                [self startDouDouPay];
+            }
+            
+        }
+        
+        //success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSString *responseString =  [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
+        NSLog(@"失败%@",responseString);
+        //failure(error);
+    }];
+
+    
+}
+
+//开始苹果支付
+-(void)startApplePay{
+    NSLog(@"开始苹果支付");
+    
+}
+//开始平台支付
+-(void)startDouDouPay{
+    NSLog(@"开始自有平台支付");
+    
+    DgamePayViewController *loginView = [[DgamePayViewController alloc]init];
+    _vc = [UIApplication sharedApplication].windows[0].rootViewController;
+    
+    loginView.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    //controller背景透明
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        loginView.providesPresentationContextTransitionStyle = YES;
+        loginView.definesPresentationContext = YES;
+        loginView.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        NSLog(@"8+");
+    } else {
+        _vc.view.window.rootViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+        [_vc presentViewController:loginView animated:NO completion:nil];
+        _vc.view.window.rootViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+        NSLog(@"8-");
+    }
+    
+    [_vc presentViewController:loginView animated:YES completion:nil];
+    
+}
+
 
 - (void) acountManager{
     
@@ -189,6 +327,15 @@ static DgameSdk *mdgamesdk=nil;
     NSString *zoneId = [dic objectForKey:@"zoneId"];
     NSString *zoneName = [dic objectForKey:@"zoneName"];
     
+    _mRole=[DgameRole new];
+    _mRole.roleid=roleId;
+    _mRole.rolename=roleName;
+    _mRole.roleLevel=roleLevel;
+    _mRole.zoneid=zoneId;
+    _mRole.zonename=zoneName;
+    
+    NSLog(@"登录成功传入的role%@",_mRole.roleLevel);
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     // 发送二进制form数据
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
@@ -211,11 +358,13 @@ static DgameSdk *mdgamesdk=nil;
 }
 
 
+
+
 //显示悬浮窗
 - (void)showFloatWindow{
     
     
-    _floatWindow = [[LZFloatWindow alloc]initWithFrame:CGRectMake(0, 0, 40, 40) mainImageName:[UIImage imageNamed:@"dgameassets/z.png"]];
+    _floatWindow = [[LZFloatWindow alloc]initWithFrame:CGRectMake(0, 100, 40, 40) mainImageName:[UIImage imageNamed:@"dgameassets/z.png"]];
     [_floatWindow show];
     _floatWindow.clickViewBlock = ^(LZFloatWindow *view){
         
@@ -226,19 +375,25 @@ static DgameSdk *mdgamesdk=nil;
     
 }
 
+//登录成功
 -(void) onLoginSuccess:(DgameUser *) user andreason:(NSString *) remain{
     
     [_vc dismissViewControllerAnimated:YES completion:nil];
     
-    
+   
     [DgameUtils showMessage:@"玩家登录成功"];
     
     [_mLogindelegate onLoginSuccess:user andreason:remain];
     
+    //显示悬浮窗
+    if (isShowcenter) {
+        [self showFloatWindow];
+    }
+    
    
 }
 
-
+//登录失败
 -(void) onLoginFailed:(NSString *) why andreason:(NSString *) remain{
     [_vc dismissViewControllerAnimated:YES completion:nil];
     
@@ -249,6 +404,7 @@ static DgameSdk *mdgamesdk=nil;
      [_mLogindelegate onLoginFailed:why andreason:remain];
 }
 
+//登出
 -(void) onLoginOut:(NSString *) remain{
     [_vc dismissViewControllerAnimated:YES completion:nil];
     [DgameUtils showMessage:@"登出"];
@@ -262,4 +418,18 @@ static DgameSdk *mdgamesdk=nil;
     
     
 }
+
+//支付成功回调
+-(void) onSuccess : (NSString*) msg{
+    [_mPaydelegate onSuccess:msg];
+}
+//支付失败回调
+-(void) onFailed : (NSString*) msg{
+    [_mPaydelegate onFailed:msg];
+}
+//订单号
+-(void) onOderNo:(NSString*) msg{
+    [_mPaydelegate onOderNo:msg];
+}
+
 @end

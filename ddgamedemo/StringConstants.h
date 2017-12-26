@@ -23,4 +23,6 @@ extern NSString * const sendcodeurl;
 
 extern NSString * const loginurl;
 
+extern NSString * const payinfourl;//是否切换支付url
+
 @end

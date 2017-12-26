@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DgameSdk.h"
 
-@interface ViewController : UIViewController<DgameOnlineInitDelegate,DgameOnlineLoginDelegate>
+@interface ViewController : UIViewController<DgameOnlineInitDelegate,DgameOnlineLoginDelegate,DgameOnlinePayResultDelegate>
 
 
 @end

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18934EAA1FF2422200091397 /* DgameOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 18934EA91FF2422200091397 /* DgameOrder.m */; };
+		18934EAD1FF24D4400091397 /* DgameRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 18934EAC1FF24D4400091397 /* DgameRole.m */; };
+		18934EB01FF2767000091397 /* ApplePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18934EAF1FF2767000091397 /* ApplePayViewController.m */; };
+		18934EB31FF2768D00091397 /* DgamePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18934EB21FF2768D00091397 /* DgamePayViewController.m */; };
 		760482A81FE6C4CD00FCA199 /* AccountRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 760482A71FE6C4CD00FCA199 /* AccountRegisterViewController.m */; };
 		7604B8631FC4703200BFFAD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B8621FC4703200BFFAD5 /* main.m */; };
 		7604B8661FC4703200BFFAD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B8651FC4703200BFFAD5 /* AppDelegate.m */; };
@@ -58,6 +62,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18934EA81FF2422200091397 /* DgameOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DgameOrder.h; sourceTree = "<group>"; };
+		18934EA91FF2422200091397 /* DgameOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DgameOrder.m; sourceTree = "<group>"; };
+		18934EAB1FF24D4400091397 /* DgameRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DgameRole.h; sourceTree = "<group>"; };
+		18934EAC1FF24D4400091397 /* DgameRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DgameRole.m; sourceTree = "<group>"; };
+		18934EAE1FF2767000091397 /* ApplePayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplePayViewController.h; sourceTree = "<group>"; };
+		18934EAF1FF2767000091397 /* ApplePayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplePayViewController.m; sourceTree = "<group>"; };
+		18934EB11FF2768D00091397 /* DgamePayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DgamePayViewController.h; sourceTree = "<group>"; };
+		18934EB21FF2768D00091397 /* DgamePayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DgamePayViewController.m; sourceTree = "<group>"; };
 		760482A61FE6C4CD00FCA199 /* AccountRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountRegisterViewController.h; sourceTree = "<group>"; };
 		760482A71FE6C4CD00FCA199 /* AccountRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountRegisterViewController.m; sourceTree = "<group>"; };
 		7604B85E1FC4703200BFFAD5 /* ddgamedemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddgamedemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +235,14 @@
 				764171D41FE80FB1001C48E7 /* StringConstants.m */,
 				76AF79C01FEAB41500294E2E /* NSDictionary+XHLogHelper.h */,
 				76AF79C11FEAB41500294E2E /* NSDictionary+XHLogHelper.m */,
+				18934EA81FF2422200091397 /* DgameOrder.h */,
+				18934EA91FF2422200091397 /* DgameOrder.m */,
+				18934EAB1FF24D4400091397 /* DgameRole.h */,
+				18934EAC1FF24D4400091397 /* DgameRole.m */,
+				18934EAE1FF2767000091397 /* ApplePayViewController.h */,
+				18934EAF1FF2767000091397 /* ApplePayViewController.m */,
+				18934EB11FF2768D00091397 /* DgamePayViewController.h */,
+				18934EB21FF2768D00091397 /* DgamePayViewController.m */,
 			);
 			path = ddgamedemo;
 			sourceTree = "<group>";
@@ -320,6 +340,7 @@
 				TargetAttributes = {
 					7604B85D1FC4703200BFFAD5 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 3CM9J8X8W6;
 						ProvisioningStyle = Automatic;
 					};
 					7604B8761FC4703200BFFAD5 = {
@@ -402,13 +423,17 @@
 				76DFC7091FEBFB61007D2A23 /* DgameAppDelegae.m in Sources */,
 				76503C6B1FF15A98001D0AD1 /* AcountManagerViewController.m in Sources */,
 				7604B8631FC4703200BFFAD5 /* main.m in Sources */,
+				18934EAD1FF24D4400091397 /* DgameRole.m in Sources */,
+				18934EB01FF2767000091397 /* ApplePayViewController.m in Sources */,
 				76AF79BF1FEA9E5000294E2E /* AFURLSessionManager.m in Sources */,
 				764171D51FE80FB1001C48E7 /* StringConstants.m in Sources */,
 				760482A81FE6C4CD00FCA199 /* AccountRegisterViewController.m in Sources */,
 				76AF79BC1FEA9E5000294E2E /* AFSecurityPolicy.m in Sources */,
 				760C0E861FCF042B005C8217 /* PhoneRegisterViewController.m in Sources */,
 				76AF79BB1FEA9E5000294E2E /* AFNetworkReachabilityManager.m in Sources */,
+				18934EB31FF2768D00091397 /* DgamePayViewController.m in Sources */,
 				76503C691FF15A98001D0AD1 /* LZFloatWindow.m in Sources */,
+				18934EAA1FF2422200091397 /* DgameOrder.m in Sources */,
 				76AF79C21FEAB41500294E2E /* NSDictionary+XHLogHelper.m in Sources */,
 				76503C681FF15A98001D0AD1 /* FSLoading.m in Sources */,
 				7604B8991FC47E2A00BFFAD5 /* DgameUser.m in Sources */,
@@ -560,9 +585,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3CM9J8X8W6;
 				INFOPLIST_FILE = ddgamedemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.doudouyule.ddgamedemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianguo.testbuy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				ddappid = kk321342142;
 			};
@@ -572,9 +599,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3CM9J8X8W6;
 				INFOPLIST_FILE = ddgamedemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.doudouyule.ddgamedemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianguo.testbuy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				ddappid = kk321342142;
 			};

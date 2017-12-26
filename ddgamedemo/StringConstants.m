@@ -28,5 +28,6 @@ NSString * const active=@"https://api.jf-q.com/data/active_handler";
  NSString * const registerurl=@"https://api.jf-q.com/user/register/";
  NSString * const sendcodeurl=@"https://api.jf-q.com/user/sendcode/";
  NSString * const loginurl=@"https://api.jf-q.com/user/login/";
+ NSString * const payinfourl=@"https://api.jf-q.com/data/payinfo/";
 
 @end

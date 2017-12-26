@@ -16,6 +16,9 @@
 #import <AdSupport/AdSupport.h>
 #import "NSDictionary+XHLogHelper.h"
 #import "LZFloatWindow.h"
+#import "DgameOrder.h"
+#import "DgameRole.h"
+#import "DgamePayViewController.h"
 
 
 //协议开始
@@ -38,6 +41,16 @@
 -(void) onLoginOut:(NSString *) remain;
 @end
 
+//支付协议
+@protocol DgameOnlinePayResultDelegate <NSObject>
+
+@required
+-(void) onSuccess : (NSString*) msg;//支付成功回调
+@required
+-(void) onFailed : (NSString*) msg;//支付失败回调
+@required
+-(void) onOderNo:(NSString*) msg;//订单号
+@end
 
 //上面定义协议
 
@@ -46,15 +59,27 @@
 @property (nonatomic,weak) id<DgameOnlineInitDelegate> mInitdelegate;
 
 @property (nonatomic,weak) id<DgameOnlineLoginDelegate> mLogindelegate;
+@property (nonatomic,weak) id<DgameOnlinePayResultDelegate> mPaydelegate;
+
 @property(nonatomic,strong) LZFloatWindow *floatWindow;
 
 @property (nonatomic,strong) UIViewController *vc;
+
+@property (nonatomic,strong)  DgameOrder *morder;
+
+@property (nonatomic,strong)  DgameRole *mRole;
+
+
+
+
 
 
 + (DgameSdk *) Instance;
 
 
 - (void) DgameOnlineHelperinitSDKWithListener:(id) delegate;
+
+- (void) DgameOnlineHelpersetRoleData:(NSString *) roleData;
 
 - (void) login:(NSString *) remain;
 
@@ -67,4 +92,7 @@
 -(void) onResponse:(NSString *) tag andResponsewhy:(NSString *) value;
 //关闭viewcotroller
 -(void) dismissViewcontroller;
+-(void) pay:(int32_t) unitPrice andName:(NSString *) goodName andExtinfo:(NSString *) extinfo andOrderid:(NSString *) orderid withPayListener:(id) paydelegate;
+// [YiJieOnlineHelper pay:(int32_t)
+//unitPrice : (NSString*) unitName : (int32_t) count : (NSString*) callBackInfo : (NSString*) callBackUrl : (id) payResultListener];
 @end
