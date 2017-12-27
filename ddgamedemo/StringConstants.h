@@ -24,5 +24,6 @@ extern NSString * const sendcodeurl;
 extern NSString * const loginurl;
 
 extern NSString * const payinfourl;//是否切换支付url
+extern NSString * const payiniturl;//开始支付获取支付参数接口
 
 @end

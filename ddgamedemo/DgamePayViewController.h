@@ -9,6 +9,8 @@
 #import "DgameUtils.h"
 #import "StringConstants.h"
 
+#import "AFNetworking.h"
+#import "DgameSdk.h"
 @interface DgamePayViewController : UIViewController
 
 

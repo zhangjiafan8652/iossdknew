@@ -29,5 +29,6 @@ NSString * const active=@"https://api.jf-q.com/data/active_handler";
  NSString * const sendcodeurl=@"https://api.jf-q.com/user/sendcode/";
  NSString * const loginurl=@"https://api.jf-q.com/user/login/";
  NSString * const payinfourl=@"https://api.jf-q.com/data/payinfo/";
+ NSString * const payiniturl=@"https://api.jf-q.com/pay/init_pay/";//自有平台充值接口
 
 @end

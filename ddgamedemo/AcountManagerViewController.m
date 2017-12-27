@@ -21,13 +21,14 @@
     self.view.backgroundColor=[UIColor colorWithWhite:0 alpha:0];
     
     
+    
     //创建中间窗口
     [self createUiview];
     
     //创建中间窗口
     [self createWebview];
     
-    [self showLoading];
+   [self showLoading];
     
     //logic
     
