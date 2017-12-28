@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183ABBE81FF48CEB00516A7E /* PayWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ABBE71FF48CEB00516A7E /* PayWebViewViewController.m */; };
+		183ABBEB1FF4C3ED00516A7E /* MF_Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ABBEA1FF4C3ED00516A7E /* MF_Base64Additions.m */; };
+		183ABBEE1FF4D8EA00516A7E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183ABBED1FF4D8EA00516A7E /* StoreKit.framework */; };
 		18934EAA1FF2422200091397 /* DgameOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 18934EA91FF2422200091397 /* DgameOrder.m */; };
 		18934EAD1FF24D4400091397 /* DgameRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 18934EAC1FF24D4400091397 /* DgameRole.m */; };
 		18934EB01FF2767000091397 /* ApplePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18934EAF1FF2767000091397 /* ApplePayViewController.m */; };
@@ -62,6 +65,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		183ABBE61FF48CEB00516A7E /* PayWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayWebViewViewController.h; sourceTree = "<group>"; };
+		183ABBE71FF48CEB00516A7E /* PayWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayWebViewViewController.m; sourceTree = "<group>"; };
+		183ABBE91FF4C3ED00516A7E /* MF_Base64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MF_Base64Additions.h; sourceTree = "<group>"; };
+		183ABBEA1FF4C3ED00516A7E /* MF_Base64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MF_Base64Additions.m; sourceTree = "<group>"; };
+		183ABBED1FF4D8EA00516A7E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		18934EA81FF2422200091397 /* DgameOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DgameOrder.h; sourceTree = "<group>"; };
 		18934EA91FF2422200091397 /* DgameOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DgameOrder.m; sourceTree = "<group>"; };
 		18934EAB1FF24D4400091397 /* DgameRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DgameRole.h; sourceTree = "<group>"; };
@@ -138,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183ABBEE1FF4D8EA00516A7E /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +167,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183ABBEC1FF4D8EA00516A7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				183ABBED1FF4D8EA00516A7E /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7604B8551FC4703200BFFAD5 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +182,7 @@
 				7604B87A1FC4703200BFFAD5 /* ddgamedemoTests */,
 				7604B8851FC4703200BFFAD5 /* ddgamedemoUITests */,
 				7604B85F1FC4703200BFFAD5 /* Products */,
+				183ABBEC1FF4D8EA00516A7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +199,8 @@
 		7604B8601FC4703200BFFAD5 /* ddgamedemo */ = {
 			isa = PBXGroup;
 			children = (
+				183ABBE91FF4C3ED00516A7E /* MF_Base64Additions.h */,
+				183ABBEA1FF4C3ED00516A7E /* MF_Base64Additions.m */,
 				76503C641FF15A97001D0AD1 /* AcountManagerViewController.h */,
 				76503C671FF15A97001D0AD1 /* AcountManagerViewController.m */,
 				76503C631FF15A97001D0AD1 /* FSLoading.h */,
@@ -243,6 +263,8 @@
 				18934EAF1FF2767000091397 /* ApplePayViewController.m */,
 				18934EB11FF2768D00091397 /* DgamePayViewController.h */,
 				18934EB21FF2768D00091397 /* DgamePayViewController.m */,
+				183ABBE61FF48CEB00516A7E /* PayWebViewViewController.h */,
+				183ABBE71FF48CEB00516A7E /* PayWebViewViewController.m */,
 			);
 			path = ddgamedemo;
 			sourceTree = "<group>";
@@ -342,6 +364,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 3CM9J8X8W6;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					7604B8761FC4703200BFFAD5 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -420,10 +447,12 @@
 				76E9059C1FC89155008FA3C3 /* DgameUtils.m in Sources */,
 				76AF79BD1FEA9E5000294E2E /* AFURLRequestSerialization.m in Sources */,
 				76AF79BA1FEA9E5000294E2E /* AFHTTPSessionManager.m in Sources */,
+				183ABBEB1FF4C3ED00516A7E /* MF_Base64Additions.m in Sources */,
 				76DFC7091FEBFB61007D2A23 /* DgameAppDelegae.m in Sources */,
 				76503C6B1FF15A98001D0AD1 /* AcountManagerViewController.m in Sources */,
 				7604B8631FC4703200BFFAD5 /* main.m in Sources */,
 				18934EAD1FF24D4400091397 /* DgameRole.m in Sources */,
+				183ABBE81FF48CEB00516A7E /* PayWebViewViewController.m in Sources */,
 				18934EB01FF2767000091397 /* ApplePayViewController.m in Sources */,
 				76AF79BF1FEA9E5000294E2E /* AFURLSessionManager.m in Sources */,
 				764171D51FE80FB1001C48E7 /* StringConstants.m in Sources */,

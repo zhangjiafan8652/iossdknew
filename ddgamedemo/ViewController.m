@@ -23,7 +23,19 @@
     NSLog(@"VIEWDIDLOAD初始化后");
     self.view.backgroundColor=[UIColor blackColor];
    
-   
+    NSString *helloWorld = @"alipay://";
+    NSString *helloInBase64 = [helloWorld base64String];
+    NSLog(@"加密后的字符串%@",helloInBase64);
+    NSString *helloDecoded = [NSString stringFromBase64String:helloInBase64];
+     NSLog(@"解密后的字符串%@",helloDecoded);
+    
+    NSString *helloWorld1 = @"weixin://";
+    NSString *helloInBase641 = [helloWorld1 base64String];
+    NSLog(@"加密后的字符串weixin://====%@",helloInBase641);
+    NSString *helloDecoded1 = [NSString stringFromBase64String:helloInBase641];
+    NSLog(@"解密后的字符串%@",helloDecoded1);
+    
+    
 }
 
 
@@ -65,7 +77,7 @@
 - (IBAction)PayViewClick:(id)sender {
     NSLog(@"点击支付了");
    // [[DgameSdk Instance] login:@"测试"];
-    [[DgameSdk Instance] pay:100 andName:@"冰霜之剑" andExtinfo:@"透传参数" andOrderid:@"321123321"withPayListener:self];
+    [[DgameSdk Instance] pay:@"3000" andName:@"冰霜之剑" andExtinfo:@"透传参数" andOrderid:@"321123321"withPayListener:self];
 
 }
 
@@ -73,10 +85,12 @@
 
 -(void) onSuccess : (NSString*) msg{
     NSLog(@"支付成功");
+    [DgameUtils showMessage:@"游戏支付成功"];
 }//支付成功回调
 
 -(void) onFailed : (NSString*) msg{
      NSLog(@"支付失败");
+    [DgameUtils showMessage:@"游戏支付失败"];
 }//支付失败回调
 
 -(void) onOderNo:(NSString*) msg{

@@ -16,7 +16,7 @@
 //@property NSString *orderid;
 - (NSString *)description {
     //stringWithFormat 格式化字符串函数
-    return [NSString stringWithFormat:@"price=%i, goodname=%@,cpetc=%@,orderid=%@",_price, _goodname,_cpetc,_orderid];
+    return [NSString stringWithFormat:@"price=%@,goodname=%@,cpetc=%@,cporderid=%@,dgameorderid=%@",_price, _goodname,_cpetc,_cporderid,_dgameorderid];
 }
 
 @end

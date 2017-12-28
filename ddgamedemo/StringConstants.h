@@ -26,4 +26,9 @@ extern NSString * const loginurl;
 extern NSString * const payinfourl;//是否切换支付url
 extern NSString * const payiniturl;//开始支付获取支付参数接口
 
+extern NSString * const unionpayurl;//联合渠道下单接口
+
+extern NSString * const notifyurl;//通知支付成功
+
+
 @end

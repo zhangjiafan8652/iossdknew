@@ -188,12 +188,12 @@ static DgameSdk *mdgamesdk=nil;
 }
 
 //支付方法
--(void) pay:(int32_t) unitPrice andName:(NSString *) goodName andExtinfo:(NSString *) extinfo andOrderid:(NSString *) orderid withPayListener:(id) paydelegate{
+-(void) pay:(NSString *) unitPrice andName:(NSString *) goodName andExtinfo:(NSString *) extinfo andOrderid:(NSString *) orderid withPayListener:(id) paydelegate{
     _morder=[[DgameOrder alloc] init];
     
-    _morder.price=&(unitPrice);
+    _morder.price=unitPrice;
     _morder.goodname=goodName;
-    _morder.orderid=orderid;
+    _morder.cporderid=orderid;
     _morder.cpetc=extinfo;
     _mPaydelegate=paydelegate;
     
@@ -264,6 +264,29 @@ static DgameSdk *mdgamesdk=nil;
 //开始苹果支付
 -(void)startApplePay{
     NSLog(@"开始苹果支付");
+    
+   
+    
+    ApplePayViewController *loginView = [[ApplePayViewController alloc]init];
+    _vc = [UIApplication sharedApplication].windows[0].rootViewController;
+    
+    loginView.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    //controller背景透明
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        loginView.providesPresentationContextTransitionStyle = YES;
+        loginView.definesPresentationContext = YES;
+        loginView.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        NSLog(@"8+");
+    } else {
+        _vc.view.window.rootViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+        [_vc presentViewController:loginView animated:NO completion:nil];
+        _vc.view.window.rootViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+        NSLog(@"8-");
+    }
+    
+    [_vc presentViewController:loginView animated:YES completion:nil];
+
     
 }
 //开始平台支付
@@ -420,16 +443,19 @@ static DgameSdk *mdgamesdk=nil;
 }
 
 //支付成功回调
--(void) onSuccess : (NSString*) msg{
+-(void) onPaySuccess : (NSString*) msg{
     [_mPaydelegate onSuccess:msg];
+    [_vc dismissViewControllerAnimated:YES completion:nil];
 }
 //支付失败回调
--(void) onFailed : (NSString*) msg{
+-(void) onPayFailed : (NSString*) msg{
     [_mPaydelegate onFailed:msg];
+    [_vc dismissViewControllerAnimated:YES completion:nil];
 }
 //订单号
--(void) onOderNo:(NSString*) msg{
+-(void) onPayOderNo:(NSString*) msg{
     [_mPaydelegate onOderNo:msg];
+    [_vc dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

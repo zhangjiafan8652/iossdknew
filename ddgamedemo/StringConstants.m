@@ -30,5 +30,7 @@ NSString * const active=@"https://api.jf-q.com/data/active_handler";
  NSString * const loginurl=@"https://api.jf-q.com/user/login/";
  NSString * const payinfourl=@"https://api.jf-q.com/data/payinfo/";
  NSString * const payiniturl=@"https://api.jf-q.com/pay/init_pay/";//自有平台充值接口
+ NSString * const unionpayurl=@"https://api.jf-q.com/data/pay_handler/";//联合渠道下单接口
 
+ NSString * const notifyurl=@"https://api.jf-q.com/pay/notify/";
 @end

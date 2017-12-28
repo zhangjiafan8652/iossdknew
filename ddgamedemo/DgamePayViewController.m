@@ -192,8 +192,7 @@ static const NSInteger ZHIFUPAY =5;
 - (void)buttonClick:(UIButton *)button{
     if (button.tag==PRETAG) {
       
-         [self dismissViewControllerAnimated:YES completion:nil];
-        
+        [[DgameSdk Instance] onPayFailed:@"玩家取消支付"];
     }else if(button.tag==WEIXINPAY){
         NSLog(@"微信支付");
         [self startPay:WEIXINPAY];
@@ -226,7 +225,7 @@ static const NSInteger ZHIFUPAY =5;
    // NSString *role_level=[DgameSdk Instance].mRole.roleLevel;
     
     
-    NSString *amount = [[NSString alloc] initWithFormat:@"%i",[DgameSdk Instance].morder.price];
+    NSString *amount = [DgameSdk Instance].morder.price;
     NSString *pay_type = [[NSString alloc] initWithFormat:@"%d",type];
     // NSMutableDictionary *parameters = @{@"idfa":IDFA,@"app_id":APPID};
     //  NSMutableDictionary *dic2 = [NSMutableDictionary dictionaryWithObjectsAndKeys:IDFA,@"idfa",APPID,@"app_id",nil];
@@ -238,12 +237,12 @@ static const NSInteger ZHIFUPAY =5;
     NSLog(@"amount%@",amount);
     NSLog(@"pay_type%@",pay_type);
     NSLog(@"ext%@",[DgameSdk Instance].morder.cpetc);
-    NSLog(@"orderid%@",[DgameSdk Instance].morder.orderid);
+    NSLog(@"orderid%@",[DgameSdk Instance].morder.cporderid);
 
     
     NSLog(@"url%@",payiniturl);
     
-    NSDictionary *parametersDemo = @{@"uid":uid,@"app_id":appid,@"amount":amount,@"pay_type":pay_type,@"token":token,@"ext":[DgameSdk Instance].morder.cpetc,@"orderid":[DgameSdk Instance].morder.orderid};
+    NSDictionary *parametersDemo = @{@"uid":uid,@"app_id":appid,@"amount":amount,@"pay_type":pay_type,@"token":token,@"ext":[DgameSdk Instance].morder.cpetc,@"orderid":[DgameSdk Instance].morder.cporderid};
     [manager POST:payiniturl parameters:parametersDemo progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -253,10 +252,12 @@ static const NSInteger ZHIFUPAY =5;
         NSString *str=[KJSON objectForKey:@"err_msg"];
         NSLog(@"获取支付信息返回%@",str);
         if ([str isEqualToString:@"success"]) {
-            
+            NSString *payurl=[KJSON objectForKey:@"url"];
+            [DgameSdk Instance].morder.payurl=payurl;
             //NSDictionary *data=[KJSON objectForKey:@"data"];
           //  NSString *toggle=[data objectForKey:@"toggle"];
            // NSInteger toggleint = [toggle integerValue];
+            [self startPayWebView];
             
         }
         
@@ -268,6 +269,28 @@ static const NSInteger ZHIFUPAY =5;
     }];
     
 
+
+}
+
+-(void)startPayWebView{
+    PayWebViewViewController *loginView = [[PayWebViewViewController alloc]init];
+    
+    loginView.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    //controller背景透明
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        loginView.providesPresentationContextTransitionStyle = YES;
+        loginView.definesPresentationContext = YES;
+        loginView.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        NSLog(@"8+");
+    } else {
+        self.view.window.rootViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+        [self presentViewController:loginView animated:NO completion:nil];
+        self.view.window.rootViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+        NSLog(@"8-");
+    }
+    
+    [self presentViewController:loginView animated:YES completion:nil];
 
 }
 

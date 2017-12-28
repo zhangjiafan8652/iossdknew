@@ -19,6 +19,7 @@
 #import "DgameOrder.h"
 #import "DgameRole.h"
 #import "DgamePayViewController.h"
+#import "ApplePayViewController.h"
 
 
 //协议开始
@@ -92,7 +93,15 @@
 -(void) onResponse:(NSString *) tag andResponsewhy:(NSString *) value;
 //关闭viewcotroller
 -(void) dismissViewcontroller;
--(void) pay:(int32_t) unitPrice andName:(NSString *) goodName andExtinfo:(NSString *) extinfo andOrderid:(NSString *) orderid withPayListener:(id) paydelegate;
+-(void) pay:(NSString *) unitPrice andName:(NSString *) goodName andExtinfo:(NSString *) extinfo andOrderid:(NSString *) orderid withPayListener:(id) paydelegate;
+
+//支付成功回调
+-(void) onPaySuccess : (NSString*) msg;
+//支付失败回调
+-(void) onPayFailed : (NSString*) msg;
+//订单号
+-(void) onPayOderNo:(NSString*) msg;
+
 // [YiJieOnlineHelper pay:(int32_t)
 //unitPrice : (NSString*) unitName : (int32_t) count : (NSString*) callBackInfo : (NSString*) callBackUrl : (id) payResultListener];
 @end

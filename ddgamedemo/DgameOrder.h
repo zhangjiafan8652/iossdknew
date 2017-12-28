@@ -11,10 +11,12 @@
 @interface DgameOrder : NSObject
 
 
-@property int32_t *price;
+@property NSString *price;
 @property NSString *goodname;
 @property NSString *cpetc;
-@property NSString *orderid;
+@property NSString *cporderid;
+@property NSString *payurl;
+@property NSString *dgameorderid;
 
 - (NSString *)description;
 @end

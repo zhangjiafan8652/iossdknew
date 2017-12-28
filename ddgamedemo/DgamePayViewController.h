@@ -11,6 +11,7 @@
 
 #import "AFNetworking.h"
 #import "DgameSdk.h"
+#import "PayWebViewViewController.h"
 @interface DgamePayViewController : UIViewController
 
 
