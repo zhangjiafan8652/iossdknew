@@ -23,17 +23,6 @@
     NSLog(@"VIEWDIDLOAD初始化后");
     self.view.backgroundColor=[UIColor blackColor];
    
-    NSString *helloWorld = @"alipay://";
-    NSString *helloInBase64 = [helloWorld base64String];
-    NSLog(@"加密后的字符串%@",helloInBase64);
-    NSString *helloDecoded = [NSString stringFromBase64String:helloInBase64];
-     NSLog(@"解密后的字符串%@",helloDecoded);
-    
-    NSString *helloWorld1 = @"weixin://";
-    NSString *helloInBase641 = [helloWorld1 base64String];
-    NSLog(@"加密后的字符串weixin://====%@",helloInBase641);
-    NSString *helloDecoded1 = [NSString stringFromBase64String:helloInBase641];
-    NSLog(@"解密后的字符串%@",helloDecoded1);
     
     
 }

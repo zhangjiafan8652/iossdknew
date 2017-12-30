@@ -30,7 +30,7 @@ static const NSInteger PRETAG =601;
     //创建标题头
     [self createTitleView];
     
-    [self showLoading];
+   // [self showLoading];
 
     
     //创建平台订单

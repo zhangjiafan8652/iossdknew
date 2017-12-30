@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 #import "DgameUtils.h"
-#import "PhoneRegisterViewController.h"
+#import "AccountRegisterViewController.h"
 #import "AFNetworking.h"
 #import "DgameSdk.h"
 

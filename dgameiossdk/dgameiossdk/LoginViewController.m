@@ -37,15 +37,7 @@
     
     //中间布局
     [self createUsernameAndPasswordView];
-    NSString *nsuserdefusername=[DgameUtils getNSUserDefaultsBykey:@"username"];
-     NSString *nspassworddefusername=[DgameUtils getNSUserDefaultsBykey:@"password"];
-     NSLog(@"username===========%@",nsuserdefusername);
-    if (nsuserdefusername!=nil) {
-        [_usernametextview setText:nsuserdefusername];
-    }
-    if (nspassworddefusername!=nil) {
-         [_passwordtextview setText:nspassworddefusername];
-    }
+    
     
     
  
@@ -59,7 +51,24 @@
     //  给 _keyBoardlsVisible 赋初值
     _keyBoardlsVisible = NO;
     [center addObserver:self selector:@selector(keyboardDidShow) name:UIKeyboardDidShowNotification object:nil];
-    [center addObserver:self selector:@selector(keyboardDidHide) name:UIKeyboardWillHideNotification object:nil];  }
+    [center addObserver:self selector:@selector(keyboardDidHide) name:UIKeyboardWillHideNotification object:nil];
+
+
+    //给用户名和密码赋值
+    
+    NSString *nsuserdefusername=[DgameUtils getNSUserDefaultsBykey:@"username"];
+    NSString *nspassworddefusername=[DgameUtils getNSUserDefaultsBykey:@"password"];
+    NSLog(@"username===========%@",nsuserdefusername);
+
+    if (nsuserdefusername!=nil) {
+        [_usernametextview setText:nsuserdefusername];
+    }else{
+        [self startAcountRegister];
+    }
+    if (nspassworddefusername!=nil) {
+        [_passwordtextview setText:nspassworddefusername];
+    }
+}
 
 
 //  键盘弹出触发该方法
@@ -275,27 +284,32 @@
         //注册
         NSLog(@"注册");
         
-        PhoneRegisterViewController *loginView = [[PhoneRegisterViewController alloc]init];
-        
-        loginView.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-        
-        //controller背景透明
-        if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
-            loginView.providesPresentationContextTransitionStyle = YES;
-            loginView.definesPresentationContext = YES;
-            loginView.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-            NSLog(@"8+");
-        } else {
-            self.view.window.rootViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
-            [self presentViewController:loginView animated:NO completion:nil];
-            self.view.window.rootViewController.modalPresentationStyle = UIModalPresentationFullScreen;
-            NSLog(@"8-");
-        }
-        
-        [self presentViewController:loginView animated:YES completion:nil];
+        [self startAcountRegister];
         
         
     }
+}
+
+-(void)startAcountRegister{
+    AccountRegisterViewController *loginView = [[AccountRegisterViewController alloc]init];
+    
+    loginView.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    //controller背景透明
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        loginView.providesPresentationContextTransitionStyle = YES;
+        loginView.definesPresentationContext = YES;
+        loginView.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        NSLog(@"8+");
+    } else {
+        self.view.window.rootViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+        [self presentViewController:loginView animated:NO completion:nil];
+        self.view.window.rootViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+        NSLog(@"8-");
+    }
+    
+    [self presentViewController:loginView animated:YES completion:nil];
+
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     

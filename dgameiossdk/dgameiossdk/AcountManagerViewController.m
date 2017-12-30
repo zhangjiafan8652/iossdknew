@@ -44,13 +44,13 @@
 
 - (void)hideLoading {
     // 隐藏动画
-    [self.view hideLoading];
+    [_mwebview hideLoading];
 }
 
 - (void)showLoading{
     
     // 显示动画
-    [self.view showLoading];
+    [_mwebview showLoading];
     
     
 }

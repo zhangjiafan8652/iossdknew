@@ -7,14 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		183ABBE81FF48CEB00516A7E /* PayWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ABBE71FF48CEB00516A7E /* PayWebViewViewController.m */; };
-		183ABBEB1FF4C3ED00516A7E /* MF_Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ABBEA1FF4C3ED00516A7E /* MF_Base64Additions.m */; };
 		183ABBEE1FF4D8EA00516A7E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183ABBED1FF4D8EA00516A7E /* StoreKit.framework */; };
-		18934EAA1FF2422200091397 /* DgameOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 18934EA91FF2422200091397 /* DgameOrder.m */; };
-		18934EAD1FF24D4400091397 /* DgameRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 18934EAC1FF24D4400091397 /* DgameRole.m */; };
-		18934EB01FF2767000091397 /* ApplePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18934EAF1FF2767000091397 /* ApplePayViewController.m */; };
-		18934EB31FF2768D00091397 /* DgamePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18934EB21FF2768D00091397 /* DgamePayViewController.m */; };
-		760482A81FE6C4CD00FCA199 /* AccountRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 760482A71FE6C4CD00FCA199 /* AccountRegisterViewController.m */; };
+		1840EC201FF744B600D6D38E /* dgameiossdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1840EC1F1FF744B600D6D38E /* dgameiossdk.framework */; };
 		7604B8631FC4703200BFFAD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B8621FC4703200BFFAD5 /* main.m */; };
 		7604B8661FC4703200BFFAD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B8651FC4703200BFFAD5 /* AppDelegate.m */; };
 		7604B8691FC4703200BFFAD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B8681FC4703200BFFAD5 /* ViewController.m */; };
@@ -23,31 +17,24 @@
 		7604B8711FC4703200BFFAD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7604B86F1FC4703200BFFAD5 /* LaunchScreen.storyboard */; };
 		7604B87C1FC4703200BFFAD5 /* ddgamedemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B87B1FC4703200BFFAD5 /* ddgamedemoTests.m */; };
 		7604B8871FC4703200BFFAD5 /* ddgamedemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B8861FC4703200BFFAD5 /* ddgamedemoUITests.m */; };
-		7604B8961FC4775500BFFAD5 /* DgameSdk.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B8951FC4775500BFFAD5 /* DgameSdk.m */; };
-		7604B8991FC47E2A00BFFAD5 /* DgameUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B8981FC47E2A00BFFAD5 /* DgameUser.m */; };
-		760C0E861FCF042B005C8217 /* PhoneRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 760C0E851FCF042B005C8217 /* PhoneRegisterViewController.m */; };
-		762777231FEF957F00DF4B7E /* DYYFloatWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 762777211FEF957F00DF4B7E /* DYYFloatWindow.m */; };
-		764171D51FE80FB1001C48E7 /* StringConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 764171D41FE80FB1001C48E7 /* StringConstants.m */; };
-		76503C681FF15A98001D0AD1 /* FSLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 76503C601FF15A96001D0AD1 /* FSLoading.m */; };
-		76503C691FF15A98001D0AD1 /* LZFloatWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 76503C611FF15A96001D0AD1 /* LZFloatWindow.m */; };
-		76503C6A1FF15A98001D0AD1 /* UIView+FSLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 76503C661FF15A97001D0AD1 /* UIView+FSLoading.m */; };
-		76503C6B1FF15A98001D0AD1 /* AcountManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76503C671FF15A97001D0AD1 /* AcountManagerViewController.m */; };
-		76AF79BA1FEA9E5000294E2E /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AF79AE1FEA9E5000294E2E /* AFHTTPSessionManager.m */; };
-		76AF79BB1FEA9E5000294E2E /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AF79B11FEA9E5000294E2E /* AFNetworkReachabilityManager.m */; };
-		76AF79BC1FEA9E5000294E2E /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AF79B31FEA9E5000294E2E /* AFSecurityPolicy.m */; };
-		76AF79BD1FEA9E5000294E2E /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AF79B51FEA9E5000294E2E /* AFURLRequestSerialization.m */; };
-		76AF79BE1FEA9E5000294E2E /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AF79B71FEA9E5000294E2E /* AFURLResponseSerialization.m */; };
-		76AF79BF1FEA9E5000294E2E /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AF79B91FEA9E5000294E2E /* AFURLSessionManager.m */; };
-		76AF79C21FEAB41500294E2E /* NSDictionary+XHLogHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AF79C11FEAB41500294E2E /* NSDictionary+XHLogHelper.m */; };
 		76BDE0571FC98C9F0077A90E /* dgameassets in Resources */ = {isa = PBXBuildFile; fileRef = 76BDE0561FC98C9F0077A90E /* dgameassets */; };
-		76DFC7091FEBFB61007D2A23 /* DgameAppDelegae.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DFC7081FEBFB61007D2A23 /* DgameAppDelegae.m */; };
-		76E2BD1B1FE961C200116386 /* ACFnetwork in Resources */ = {isa = PBXBuildFile; fileRef = 76E2BD1A1FE961C200116386 /* ACFnetwork */; };
-		76E8D57A1FED2CFD00788241 /* WToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E8D5791FED2CFD00788241 /* WToast.m */; };
-		76E905961FC8758B008FA3C3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E905951FC8758B008FA3C3 /* LoginViewController.m */; };
-		76E9059C1FC89155008FA3C3 /* DgameUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E9059B1FC89155008FA3C3 /* DgameUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		183777B91FF6795A000FBBBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 183777B41FF67959000FBBBD /* dgameiossdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1837779A1FF67958000FBBBD;
+			remoteInfo = dgameiossdk;
+		};
+		183777BB1FF6795A000FBBBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 183777B41FF67959000FBBBD /* dgameiossdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 183777A31FF67958000FBBBD;
+			remoteInfo = dgameiossdkTests;
+		};
 		7604B8781FC4703200BFFAD5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7604B8561FC4703200BFFAD5 /* Project object */;
@@ -65,21 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		183ABBE61FF48CEB00516A7E /* PayWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayWebViewViewController.h; sourceTree = "<group>"; };
-		183ABBE71FF48CEB00516A7E /* PayWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayWebViewViewController.m; sourceTree = "<group>"; };
-		183ABBE91FF4C3ED00516A7E /* MF_Base64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MF_Base64Additions.h; sourceTree = "<group>"; };
-		183ABBEA1FF4C3ED00516A7E /* MF_Base64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MF_Base64Additions.m; sourceTree = "<group>"; };
+		183777B41FF67959000FBBBD /* dgameiossdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = dgameiossdk.xcodeproj; path = dgameiossdk/dgameiossdk.xcodeproj; sourceTree = "<group>"; };
 		183ABBED1FF4D8EA00516A7E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		18934EA81FF2422200091397 /* DgameOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DgameOrder.h; sourceTree = "<group>"; };
-		18934EA91FF2422200091397 /* DgameOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DgameOrder.m; sourceTree = "<group>"; };
-		18934EAB1FF24D4400091397 /* DgameRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DgameRole.h; sourceTree = "<group>"; };
-		18934EAC1FF24D4400091397 /* DgameRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DgameRole.m; sourceTree = "<group>"; };
-		18934EAE1FF2767000091397 /* ApplePayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplePayViewController.h; sourceTree = "<group>"; };
-		18934EAF1FF2767000091397 /* ApplePayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplePayViewController.m; sourceTree = "<group>"; };
-		18934EB11FF2768D00091397 /* DgamePayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DgamePayViewController.h; sourceTree = "<group>"; };
-		18934EB21FF2768D00091397 /* DgamePayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DgamePayViewController.m; sourceTree = "<group>"; };
-		760482A61FE6C4CD00FCA199 /* AccountRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountRegisterViewController.h; sourceTree = "<group>"; };
-		760482A71FE6C4CD00FCA199 /* AccountRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountRegisterViewController.m; sourceTree = "<group>"; };
+		1840EC1F1FF744B600D6D38E /* dgameiossdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = dgameiossdk.framework; sourceTree = "<group>"; };
 		7604B85E1FC4703200BFFAD5 /* ddgamedemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddgamedemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7604B8621FC4703200BFFAD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7604B8641FC4703200BFFAD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,49 +71,7 @@
 		7604B8821FC4703200BFFAD5 /* ddgamedemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ddgamedemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7604B8861FC4703200BFFAD5 /* ddgamedemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ddgamedemoUITests.m; sourceTree = "<group>"; };
 		7604B8881FC4703200BFFAD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7604B8941FC4775500BFFAD5 /* DgameSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DgameSdk.h; sourceTree = "<group>"; };
-		7604B8951FC4775500BFFAD5 /* DgameSdk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DgameSdk.m; sourceTree = "<group>"; };
-		7604B8971FC47E2A00BFFAD5 /* DgameUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DgameUser.h; sourceTree = "<group>"; };
-		7604B8981FC47E2A00BFFAD5 /* DgameUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DgameUser.m; sourceTree = "<group>"; };
-		760C0E841FCF042B005C8217 /* PhoneRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneRegisterViewController.h; sourceTree = "<group>"; };
-		760C0E851FCF042B005C8217 /* PhoneRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneRegisterViewController.m; sourceTree = "<group>"; };
-		762777211FEF957F00DF4B7E /* DYYFloatWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYYFloatWindow.m; sourceTree = "<group>"; };
-		762777221FEF957F00DF4B7E /* DYYFloatWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYYFloatWindow.h; sourceTree = "<group>"; };
-		764171D31FE80FB1001C48E7 /* StringConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringConstants.h; sourceTree = "<group>"; };
-		764171D41FE80FB1001C48E7 /* StringConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringConstants.m; sourceTree = "<group>"; };
-		76503C601FF15A96001D0AD1 /* FSLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLoading.m; sourceTree = "<group>"; };
-		76503C611FF15A96001D0AD1 /* LZFloatWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZFloatWindow.m; sourceTree = "<group>"; };
-		76503C621FF15A97001D0AD1 /* LZFloatWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFloatWindow.h; sourceTree = "<group>"; };
-		76503C631FF15A97001D0AD1 /* FSLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLoading.h; sourceTree = "<group>"; };
-		76503C641FF15A97001D0AD1 /* AcountManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcountManagerViewController.h; sourceTree = "<group>"; };
-		76503C651FF15A97001D0AD1 /* UIView+FSLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FSLoading.h"; sourceTree = "<group>"; };
-		76503C661FF15A97001D0AD1 /* UIView+FSLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FSLoading.m"; sourceTree = "<group>"; };
-		76503C671FF15A97001D0AD1 /* AcountManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcountManagerViewController.m; sourceTree = "<group>"; };
-		76AF79AD1FEA9E5000294E2E /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = ACFnetwork/AFHTTPSessionManager.h; sourceTree = "<group>"; };
-		76AF79AE1FEA9E5000294E2E /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = ACFnetwork/AFHTTPSessionManager.m; sourceTree = "<group>"; };
-		76AF79AF1FEA9E5000294E2E /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = ACFnetwork/AFNetworking.h; sourceTree = "<group>"; };
-		76AF79B01FEA9E5000294E2E /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = ACFnetwork/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
-		76AF79B11FEA9E5000294E2E /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = ACFnetwork/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		76AF79B21FEA9E5000294E2E /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = ACFnetwork/AFSecurityPolicy.h; sourceTree = "<group>"; };
-		76AF79B31FEA9E5000294E2E /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = ACFnetwork/AFSecurityPolicy.m; sourceTree = "<group>"; };
-		76AF79B41FEA9E5000294E2E /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = ACFnetwork/AFURLRequestSerialization.h; sourceTree = "<group>"; };
-		76AF79B51FEA9E5000294E2E /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = ACFnetwork/AFURLRequestSerialization.m; sourceTree = "<group>"; };
-		76AF79B61FEA9E5000294E2E /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = ACFnetwork/AFURLResponseSerialization.h; sourceTree = "<group>"; };
-		76AF79B71FEA9E5000294E2E /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = ACFnetwork/AFURLResponseSerialization.m; sourceTree = "<group>"; };
-		76AF79B81FEA9E5000294E2E /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = ACFnetwork/AFURLSessionManager.h; sourceTree = "<group>"; };
-		76AF79B91FEA9E5000294E2E /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = ACFnetwork/AFURLSessionManager.m; sourceTree = "<group>"; };
-		76AF79C01FEAB41500294E2E /* NSDictionary+XHLogHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+XHLogHelper.h"; sourceTree = "<group>"; };
-		76AF79C11FEAB41500294E2E /* NSDictionary+XHLogHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+XHLogHelper.m"; sourceTree = "<group>"; };
 		76BDE0561FC98C9F0077A90E /* dgameassets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dgameassets; sourceTree = "<group>"; };
-		76DFC7071FEBFB61007D2A23 /* DgameAppDelegae.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DgameAppDelegae.h; sourceTree = "<group>"; };
-		76DFC7081FEBFB61007D2A23 /* DgameAppDelegae.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DgameAppDelegae.m; sourceTree = "<group>"; };
-		76E2BD1A1FE961C200116386 /* ACFnetwork */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ACFnetwork; sourceTree = "<group>"; };
-		76E8D5781FED2CFD00788241 /* WToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WToast.h; sourceTree = "<group>"; };
-		76E8D5791FED2CFD00788241 /* WToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WToast.m; sourceTree = "<group>"; };
-		76E905941FC8758B008FA3C3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		76E905951FC8758B008FA3C3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		76E9059A1FC89155008FA3C3 /* DgameUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DgameUtils.h; sourceTree = "<group>"; };
-		76E9059B1FC89155008FA3C3 /* DgameUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DgameUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1840EC201FF744B600D6D38E /* dgameiossdk.framework in Frameworks */,
 				183ABBEE1FF4D8EA00516A7E /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183777B51FF67959000FBBBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				183777BA1FF6795A000FBBBD /* dgameiossdk.framework */,
+				183777BC1FF6795A000FBBBD /* dgameiossdkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		183ABBEC1FF4D8EA00516A7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +121,8 @@
 		7604B8551FC4703200BFFAD5 = {
 			isa = PBXGroup;
 			children = (
+				1840EC1F1FF744B600D6D38E /* dgameiossdk.framework */,
+				183777B41FF67959000FBBBD /* dgameiossdk.xcodeproj */,
 				7604B8601FC4703200BFFAD5 /* ddgamedemo */,
 				7604B87A1FC4703200BFFAD5 /* ddgamedemoTests */,
 				7604B8851FC4703200BFFAD5 /* ddgamedemoUITests */,
@@ -199,36 +144,6 @@
 		7604B8601FC4703200BFFAD5 /* ddgamedemo */ = {
 			isa = PBXGroup;
 			children = (
-				183ABBE91FF4C3ED00516A7E /* MF_Base64Additions.h */,
-				183ABBEA1FF4C3ED00516A7E /* MF_Base64Additions.m */,
-				76503C641FF15A97001D0AD1 /* AcountManagerViewController.h */,
-				76503C671FF15A97001D0AD1 /* AcountManagerViewController.m */,
-				76503C631FF15A97001D0AD1 /* FSLoading.h */,
-				76503C601FF15A96001D0AD1 /* FSLoading.m */,
-				76503C621FF15A97001D0AD1 /* LZFloatWindow.h */,
-				76503C611FF15A96001D0AD1 /* LZFloatWindow.m */,
-				76503C651FF15A97001D0AD1 /* UIView+FSLoading.h */,
-				76503C661FF15A97001D0AD1 /* UIView+FSLoading.m */,
-				762777221FEF957F00DF4B7E /* DYYFloatWindow.h */,
-				762777211FEF957F00DF4B7E /* DYYFloatWindow.m */,
-				76E8D5781FED2CFD00788241 /* WToast.h */,
-				76E8D5791FED2CFD00788241 /* WToast.m */,
-				76DFC7071FEBFB61007D2A23 /* DgameAppDelegae.h */,
-				76DFC7081FEBFB61007D2A23 /* DgameAppDelegae.m */,
-				76AF79AD1FEA9E5000294E2E /* AFHTTPSessionManager.h */,
-				76AF79AE1FEA9E5000294E2E /* AFHTTPSessionManager.m */,
-				76AF79AF1FEA9E5000294E2E /* AFNetworking.h */,
-				76AF79B01FEA9E5000294E2E /* AFNetworkReachabilityManager.h */,
-				76AF79B11FEA9E5000294E2E /* AFNetworkReachabilityManager.m */,
-				76AF79B21FEA9E5000294E2E /* AFSecurityPolicy.h */,
-				76AF79B31FEA9E5000294E2E /* AFSecurityPolicy.m */,
-				76AF79B41FEA9E5000294E2E /* AFURLRequestSerialization.h */,
-				76AF79B51FEA9E5000294E2E /* AFURLRequestSerialization.m */,
-				76AF79B61FEA9E5000294E2E /* AFURLResponseSerialization.h */,
-				76AF79B71FEA9E5000294E2E /* AFURLResponseSerialization.m */,
-				76AF79B81FEA9E5000294E2E /* AFURLSessionManager.h */,
-				76AF79B91FEA9E5000294E2E /* AFURLSessionManager.m */,
-				76E2BD1A1FE961C200116386 /* ACFnetwork */,
 				76BDE0561FC98C9F0077A90E /* dgameassets */,
 				7604B8641FC4703200BFFAD5 /* AppDelegate.h */,
 				7604B8651FC4703200BFFAD5 /* AppDelegate.m */,
@@ -239,32 +154,6 @@
 				7604B86F1FC4703200BFFAD5 /* LaunchScreen.storyboard */,
 				7604B8721FC4703200BFFAD5 /* Info.plist */,
 				7604B8611FC4703200BFFAD5 /* Supporting Files */,
-				7604B8941FC4775500BFFAD5 /* DgameSdk.h */,
-				7604B8951FC4775500BFFAD5 /* DgameSdk.m */,
-				7604B8971FC47E2A00BFFAD5 /* DgameUser.h */,
-				7604B8981FC47E2A00BFFAD5 /* DgameUser.m */,
-				76E905941FC8758B008FA3C3 /* LoginViewController.h */,
-				76E905951FC8758B008FA3C3 /* LoginViewController.m */,
-				76E9059A1FC89155008FA3C3 /* DgameUtils.h */,
-				76E9059B1FC89155008FA3C3 /* DgameUtils.m */,
-				760C0E841FCF042B005C8217 /* PhoneRegisterViewController.h */,
-				760C0E851FCF042B005C8217 /* PhoneRegisterViewController.m */,
-				760482A61FE6C4CD00FCA199 /* AccountRegisterViewController.h */,
-				760482A71FE6C4CD00FCA199 /* AccountRegisterViewController.m */,
-				764171D31FE80FB1001C48E7 /* StringConstants.h */,
-				764171D41FE80FB1001C48E7 /* StringConstants.m */,
-				76AF79C01FEAB41500294E2E /* NSDictionary+XHLogHelper.h */,
-				76AF79C11FEAB41500294E2E /* NSDictionary+XHLogHelper.m */,
-				18934EA81FF2422200091397 /* DgameOrder.h */,
-				18934EA91FF2422200091397 /* DgameOrder.m */,
-				18934EAB1FF24D4400091397 /* DgameRole.h */,
-				18934EAC1FF24D4400091397 /* DgameRole.m */,
-				18934EAE1FF2767000091397 /* ApplePayViewController.h */,
-				18934EAF1FF2767000091397 /* ApplePayViewController.m */,
-				18934EB11FF2768D00091397 /* DgamePayViewController.h */,
-				18934EB21FF2768D00091397 /* DgamePayViewController.m */,
-				183ABBE61FF48CEB00516A7E /* PayWebViewViewController.h */,
-				183ABBE71FF48CEB00516A7E /* PayWebViewViewController.m */,
 			);
 			path = ddgamedemo;
 			sourceTree = "<group>";
@@ -393,6 +282,12 @@
 			mainGroup = 7604B8551FC4703200BFFAD5;
 			productRefGroup = 7604B85F1FC4703200BFFAD5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 183777B51FF67959000FBBBD /* Products */;
+					ProjectRef = 183777B41FF67959000FBBBD /* dgameiossdk.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7604B85D1FC4703200BFFAD5 /* ddgamedemo */,
@@ -402,13 +297,29 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		183777BA1FF6795A000FBBBD /* dgameiossdk.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = dgameiossdk.framework;
+			remoteRef = 183777B91FF6795A000FBBBD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		183777BC1FF6795A000FBBBD /* dgameiossdkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = dgameiossdkTests.xctest;
+			remoteRef = 183777BB1FF6795A000FBBBD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		7604B85C1FC4703200BFFAD5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				76BDE0571FC98C9F0077A90E /* dgameassets in Resources */,
-				76E2BD1B1FE961C200116386 /* ACFnetwork in Resources */,
 				7604B8711FC4703200BFFAD5 /* LaunchScreen.storyboard in Resources */,
 				7604B86E1FC4703200BFFAD5 /* Assets.xcassets in Resources */,
 				7604B86C1FC4703200BFFAD5 /* Main.storyboard in Resources */,
@@ -437,35 +348,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7604B8691FC4703200BFFAD5 /* ViewController.m in Sources */,
-				7604B8961FC4775500BFFAD5 /* DgameSdk.m in Sources */,
-				76E905961FC8758B008FA3C3 /* LoginViewController.m in Sources */,
-				762777231FEF957F00DF4B7E /* DYYFloatWindow.m in Sources */,
-				76E8D57A1FED2CFD00788241 /* WToast.m in Sources */,
-				76503C6A1FF15A98001D0AD1 /* UIView+FSLoading.m in Sources */,
 				7604B8661FC4703200BFFAD5 /* AppDelegate.m in Sources */,
-				76AF79BE1FEA9E5000294E2E /* AFURLResponseSerialization.m in Sources */,
-				76E9059C1FC89155008FA3C3 /* DgameUtils.m in Sources */,
-				76AF79BD1FEA9E5000294E2E /* AFURLRequestSerialization.m in Sources */,
-				76AF79BA1FEA9E5000294E2E /* AFHTTPSessionManager.m in Sources */,
-				183ABBEB1FF4C3ED00516A7E /* MF_Base64Additions.m in Sources */,
-				76DFC7091FEBFB61007D2A23 /* DgameAppDelegae.m in Sources */,
-				76503C6B1FF15A98001D0AD1 /* AcountManagerViewController.m in Sources */,
 				7604B8631FC4703200BFFAD5 /* main.m in Sources */,
-				18934EAD1FF24D4400091397 /* DgameRole.m in Sources */,
-				183ABBE81FF48CEB00516A7E /* PayWebViewViewController.m in Sources */,
-				18934EB01FF2767000091397 /* ApplePayViewController.m in Sources */,
-				76AF79BF1FEA9E5000294E2E /* AFURLSessionManager.m in Sources */,
-				764171D51FE80FB1001C48E7 /* StringConstants.m in Sources */,
-				760482A81FE6C4CD00FCA199 /* AccountRegisterViewController.m in Sources */,
-				76AF79BC1FEA9E5000294E2E /* AFSecurityPolicy.m in Sources */,
-				760C0E861FCF042B005C8217 /* PhoneRegisterViewController.m in Sources */,
-				76AF79BB1FEA9E5000294E2E /* AFNetworkReachabilityManager.m in Sources */,
-				18934EB31FF2768D00091397 /* DgamePayViewController.m in Sources */,
-				76503C691FF15A98001D0AD1 /* LZFloatWindow.m in Sources */,
-				18934EAA1FF2422200091397 /* DgameOrder.m in Sources */,
-				76AF79C21FEAB41500294E2E /* NSDictionary+XHLogHelper.m in Sources */,
-				76503C681FF15A98001D0AD1 /* FSLoading.m in Sources */,
-				7604B8991FC47E2A00BFFAD5 /* DgameUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +499,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3CM9J8X8W6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ddgamedemo",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ddgamedemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -629,6 +518,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3CM9J8X8W6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ddgamedemo",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ddgamedemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -1,0 +1,6 @@
+framework module dgameiossdk {
+  umbrella header "dgameiossdk.h"
+
+  export *
+  module * { export * }
+}

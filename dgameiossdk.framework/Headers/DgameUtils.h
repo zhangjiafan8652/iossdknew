@@ -40,4 +40,5 @@
 +(void)setDgameUserNSUserDefaultskey:(DgameUser *)muser;
 + (BOOL)checkPassword:(NSString*) password;
 + (BOOL)checkisPhone:(NSString*) phonenumber;
++(NSString *)getTime;
 @end

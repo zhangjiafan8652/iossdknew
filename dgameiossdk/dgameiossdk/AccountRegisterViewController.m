@@ -36,6 +36,9 @@ static const NSInteger REGISTERACOUNTTAG =306;
     
     //添加头布局
     [ self createTitleView];
+    
+    
+    
     //手势关闭键盘
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
     //设置成NO表示当前控件响应后会传播到其他控件上，默认为YES。
@@ -43,6 +46,8 @@ static const NSInteger REGISTERACOUNTTAG =306;
     //将触摸事件添加到当前view
     [self.view addGestureRecognizer:tapGestureRecognizer];
     
+    
+    [self setRandomAcount];
     
 }
 -(void)keyboardHide:(UITapGestureRecognizer*)tap{
@@ -236,6 +241,16 @@ static const NSInteger REGISTERACOUNTTAG =306;
     
 }
 
+//给
+-(void) setRandomAcount{
+    
+    NSString *dd=@"dd";
+    NSString *randomacount=[DgameUtils getTime];
+    
+    [_accountnumber setText:[dd stringByAppendingString:randomacount]];
+    //_accountnumber.text=[dd stringByAppendingString:randomacount];
+
+}
 
 - (void)buttonClick:(UIButton *)button{
     if (button.tag==PRETAG) {
@@ -263,6 +278,11 @@ static const NSInteger REGISTERACOUNTTAG =306;
         }
         if ([npassword isEqualToString:@""]) {
             [DgameUtils alertDialog:self withMessage:@"密码为空！！"];
+            return;
+        }
+        
+        if([npassword length]<6){
+             [DgameUtils alertDialog:self withMessage:@"密码不能小于6位！！"];
             return;
         }
         if ([rpassword isEqualToString:@""]) {

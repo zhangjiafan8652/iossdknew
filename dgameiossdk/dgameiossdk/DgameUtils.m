@@ -261,4 +261,22 @@ static int s6height_lanscape=375;
     return [phoneTest evaluateWithObject:phonenumber];
     
 }
+
++(NSString *)getTime{
+
+    //时区(中国时区  东八区:东八区（UTC/GMT+08:00）是比格林威治时间GMT快8小时的时区)
+    //NSTimeZone *zone = [NSTimeZone localTimeZone];
+    
+    //当前时区和格林尼治时区的时间差 8小时 = 28800s
+    //NSTimeInterval timeInterval = [zone secondsFromGMTForDate:[NSDate date]];
+    
+    //格林尼治时间到现在的秒数[[NSDate date] timeIntervalSince1970]
+    NSString *sumString = [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970]];
+    
+    //截取小数点前的数
+    NSString *dateString = [[sumString componentsSeparatedByString:@"."]objectAtIndex:0];
+    NSLog(@"时间戳 = %@",dateString);
+    
+    return dateString;
+}
 @end
