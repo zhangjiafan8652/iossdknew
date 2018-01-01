@@ -30,7 +30,7 @@ static const NSInteger PRETAG =601;
     //创建标题头
     [self createTitleView];
     
-   // [self showLoading];
+    [self showLoading];
 
     
     //创建平台订单
@@ -48,17 +48,18 @@ static const NSInteger PRETAG =601;
 
 - (void)hideLoading {
     // 隐藏动画
-    [self.view hideLoading];
+    [DgameUtils stopLoading:self.view];
 }
 
 - (void)showLoading{
     
-    // 显示动画
-    [self.view showLoading];
     
+    [DgameUtils startLoading:self.view andMessage:@"正在加载..."];
+    
+    // 显示动画
+    //   [self showLoading]
     
 }
-
 
 //创建中间窗口
 -(void)createUiview{

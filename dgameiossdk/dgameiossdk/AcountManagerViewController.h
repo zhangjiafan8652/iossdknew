@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DgameSdk.h"
 #import "DgameUtils.h"
-#import "XHAmazingLoadingView.h"
+
 
 
 @interface AcountManagerViewController : UIViewController<UIWebViewDelegate>

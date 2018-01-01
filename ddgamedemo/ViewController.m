@@ -23,6 +23,7 @@
     NSLog(@"VIEWDIDLOAD初始化后");
     self.view.backgroundColor=[UIColor blackColor];
    
+    [self startLoading:self.view andMessage:@"正在加载..."];
     
     
 }
@@ -66,8 +67,8 @@
 - (IBAction)PayViewClick:(id)sender {
     NSLog(@"点击支付了");
    // [[DgameSdk Instance] login:@"测试"];
-    [[DgameSdk Instance] pay:@"3000" andName:@"冰霜之剑" andExtinfo:@"透传参数" andOrderid:@"321123321"withPayListener:self];
-
+   // [[DgameSdk Instance] pay:@"3000" andName:@"冰霜之剑" andExtinfo:@"透传参数" andOrderid:@"321123321"withPayListener:self];
+[self stopLoading:self.view ];
 }
 
 

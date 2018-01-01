@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DgameUtils.h"
 #import "StringConstants.h"
-#import "UIView+FSLoading.h"
+
 #import <StoreKit/StoreKit.h>
 #import "DgameSdk.h"
 @interface ApplePayViewController : UIViewController<SKProductsRequestDelegate,SKPaymentTransactionObserver>

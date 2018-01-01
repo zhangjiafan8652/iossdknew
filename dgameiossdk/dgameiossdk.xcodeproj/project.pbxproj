@@ -63,8 +63,6 @@
 		183778261FF67B37000FBBBD /* StringConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 183777EF1FF67B37000FBBBD /* StringConstants.m */; };
 		183778291FF67B37000FBBBD /* WToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 183777F21FF67B37000FBBBD /* WToast.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1837782A1FF67B37000FBBBD /* WToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 183777F31FF67B37000FBBBD /* WToast.m */; };
-		1840EC231FF79D2400D6D38E /* XHAmazingLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1840EC211FF79D2400D6D38E /* XHAmazingLoadingView.h */; };
-		1840EC241FF79D2400D6D38E /* XHAmazingLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1840EC221FF79D2400D6D38E /* XHAmazingLoadingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,8 +135,6 @@
 		183777EF1FF67B37000FBBBD /* StringConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringConstants.m; sourceTree = "<group>"; };
 		183777F21FF67B37000FBBBD /* WToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WToast.h; sourceTree = "<group>"; };
 		183777F31FF67B37000FBBBD /* WToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WToast.m; sourceTree = "<group>"; };
-		1840EC211FF79D2400D6D38E /* XHAmazingLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAmazingLoadingView.h; sourceTree = "<group>"; };
-		1840EC221FF79D2400D6D38E /* XHAmazingLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAmazingLoadingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,8 +177,6 @@
 		1837779C1FF67958000FBBBD /* dgameiossdk */ = {
 			isa = PBXGroup;
 			children = (
-				1840EC211FF79D2400D6D38E /* XHAmazingLoadingView.h */,
-				1840EC221FF79D2400D6D38E /* XHAmazingLoadingView.m */,
 				183777BD1FF67B36000FBBBD /* AccountRegisterViewController.h */,
 				183777BE1FF67B36000FBBBD /* AccountRegisterViewController.m */,
 				183777BF1FF67B36000FBBBD /* AcountManagerViewController.h */,
@@ -285,7 +279,6 @@
 				1837781F1FF67B37000FBBBD /* NSDictionary+XHLogHelper.h in Headers */,
 				183778011FF67B37000FBBBD /* AFURLResponseSerialization.h in Headers */,
 				183777AB1FF67959000FBBBD /* dgameiossdk.h in Headers */,
-				1840EC231FF79D2400D6D38E /* XHAmazingLoadingView.h in Headers */,
 				183777FA1FF67B37000FBBBD /* AFNetworking.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,7 +405,6 @@
 				1837781A1FF67B37000FBBBD /* LoginViewController.m in Sources */,
 				183778021FF67B37000FBBBD /* AFURLResponseSerialization.m in Sources */,
 				1837780C1FF67B37000FBBBD /* DgamePayViewController.m in Sources */,
-				1840EC241FF79D2400D6D38E /* XHAmazingLoadingView.m in Sources */,
 				183778241FF67B37000FBBBD /* PhoneRegisterViewController.m in Sources */,
 				183777F51FF67B37000FBBBD /* AccountRegisterViewController.m in Sources */,
 			);

@@ -279,4 +279,36 @@ static int s6height_lanscape=375;
     
     return dateString;
 }
++(void)startLoading:(UIView *)mView andMessage:(NSString *)msg{
+    UILabel* _muiview= [[UILabel alloc] init];
+    
+    _muiview.frame=CGRectMake(
+                              ([UIScreen mainScreen].bounds.size.width/2-([DgameUtils RealSizeWith:250]/2)),
+                              [UIScreen mainScreen].bounds.size.height/2-([DgameUtils RealSizeheight:90]/2)
+                              , [DgameUtils RealSizeWith:250],[DgameUtils RealSizeheight:90]
+                              );
+    
+    _muiview.backgroundColor=[DgameUtils colorWithHexString:@"#019ee8"];
+    [_muiview setText:msg];
+    [_muiview setTextColor:[UIColor whiteColor]];
+    _muiview.layer.cornerRadius=8;
+    _muiview.layer.masksToBounds=YES;
+    _muiview.textAlignment=NSTextAlignmentCenter;
+    _muiview.tag=114;
+    [mView addSubview:_muiview];
+    
+    
+    
+}
+
++(void)stopLoading:(UIView *)mView {
+    //[mView subviews].lastObject
+    NSLog(@"0viewde tag==%d",[mView subviews].lastObject.tag);
+    
+    if ([mView subviews].lastObject.tag==114) {
+        [[mView subviews].lastObject removeFromSuperview];
+    }
+    
+}
+
 @end

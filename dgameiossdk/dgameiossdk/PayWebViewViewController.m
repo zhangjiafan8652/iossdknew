@@ -45,13 +45,13 @@ static const NSInteger PRETAG =501;
 
 - (void)hideLoading {
     // 隐藏动画
-    [self.view hideLoading];
+   // [self.view hideLoading];
 }
 
 - (void)showLoading{
     
     // 显示动画
-    [self.view showLoading];
+ //   [self.view showLoading];
     
     
 }

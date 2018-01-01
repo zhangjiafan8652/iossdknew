@@ -44,14 +44,16 @@
 
 - (void)hideLoading {
     // 隐藏动画
-    [_mwebview hideLoading];
+   [DgameUtils stopLoading:self.view];
 }
 
 - (void)showLoading{
     
-    // 显示动画
-    [_mwebview showLoading];
     
+    [DgameUtils startLoading:self.view andMessage:@"正在加载..."];
+   
+    // 显示动画
+//   [self showLoading]
     
 }
 
@@ -140,7 +142,8 @@
 // 加载失败
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     
-    
+    [DgameUtils showMessage:@"加载失败，请检查网络"]
+    [self hideLoading];
 }
 
 
