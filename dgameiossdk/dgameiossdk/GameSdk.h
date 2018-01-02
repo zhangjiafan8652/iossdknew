@@ -1,41 +1,29 @@
 //
-//  DgameSdk.h
-//  ddgamedemo
+//  GameSdk.h
+//  dgameiossdk
 //
-//  Created by TANGWEIZHONG on 2017/11/21.
-//  Copyright © 2017年 doudouyule. All rights reserved.
+//  Created by Apple on 2018/1/2.
+//  Copyright © 2018年 Apple. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "DgameUser.h"
-#import <UIKit/UIKit.h>
-#import "LoginViewController.h"
-#import "AcountManagerViewController.h"
-#import "StringConstants.h"
-#import "AFNetworking.h"
-#import <AdSupport/AdSupport.h>
-#import "NSDictionary+XHLogHelper.h"
-#import "LZFloatWindow.h"
-#import "DgameOrder.h"
-#import "DgameRole.h"
-#import "DgamePayViewController.h"
-#import "ApplePayViewController.h"
+
 
 
 //协议开始
 
-@protocol DgameOnlineInitDelegate <NSObject>
+@protocol GameSdkInitDelegate <NSObject>
 
 @required
 -(void) onResponse:(NSString *) tag andResponsewhy:(NSString *) value;
 
 @end
 
-@protocol DgameOnlineLoginDelegate <NSObject>
+@protocol GameSdkLoginDelegate <NSObject>
 //登录成功
 
 @required
--(void) onLoginSuccess:(DgameUser *) user andreason:(NSString *) remain;
+-(void) onLoginSuccess:(GameSdkUser *) user andreason:(NSString *) remain;
 @required
 -(void) onLoginFailed:(NSString *) why andreason:(NSString *) remain;
 @required
@@ -43,7 +31,7 @@
 @end
 
 //支付协议
-@protocol DgameOnlinePayResultDelegate <NSObject>
+@protocol GameSdkPayResultDelegate <NSObject>
 
 @required
 -(void) onSuccess : (NSString*) msg ;//支付成功回调
@@ -51,23 +39,20 @@
 -(void) onFailed : (NSString*) msg;//支付失败回调
 
 @end
+@interface GameSdk : NSObject
 
-//上面定义协议
+@property (nonatomic,weak) id<GameSdkInitDelegate> mInitdelegate;
 
-@interface DgameSdk : NSObject
+@property (nonatomic,weak) id<GameSdkLoginDelegate> mLogindelegate;
+@property (nonatomic,weak) id<GameSdkPayResultDelegate> mPaydelegate;
 
-@property (nonatomic,weak) id<DgameOnlineInitDelegate> mInitdelegate;
 
-@property (nonatomic,weak) id<DgameOnlineLoginDelegate> mLogindelegate;
-@property (nonatomic,weak) id<DgameOnlinePayResultDelegate> mPaydelegate;
-
-@property(nonatomic,strong) LZFloatWindow *floatWindow;
 
 @property (nonatomic,strong) UIViewController *vc;
 
-@property (nonatomic,strong)  DgameOrder *morder;
+@property (nonatomic,strong)  GameSdkOrder *morder;
 
-@property (nonatomic,strong)  DgameRole *mRole;
+@property (nonatomic,strong)  GameSdkRole *mRole;
 
 
 
@@ -101,6 +86,9 @@
 //订单号
 -(void) onPayOderNo:(NSString*) msg;
 
-// [YiJieOnlineHelper pay:(int32_t)
-//unitPrice : (NSString*) unitName : (int32_t) count : (NSString*) callBackInfo : (NSString*) callBackUrl : (id) payResultListener];
+
+
+
+
+
 @end

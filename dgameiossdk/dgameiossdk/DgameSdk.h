@@ -46,11 +46,10 @@
 @protocol DgameOnlinePayResultDelegate <NSObject>
 
 @required
--(void) onSuccess : (NSString*) msg;//支付成功回调
+-(void) onSuccess : (NSString*) msg ;//支付成功回调
 @required
 -(void) onFailed : (NSString*) msg;//支付失败回调
-@required
--(void) onOderNo:(NSString*) msg;//订单号
+
 @end
 
 //上面定义协议
@@ -82,7 +81,7 @@
 
 - (void) DgameOnlineHelpersetRoleData:(NSString *) roleData;
 
-- (void) login:(NSString *) remain;
+- (void) login:(NSString *) remain withLoginListener:(id) logindelegate;
 
 -(void) onLoginSuccess:(DgameUser *) user andreason:(NSString *) remain;
 

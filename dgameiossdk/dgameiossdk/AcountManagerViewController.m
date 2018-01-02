@@ -142,7 +142,7 @@
 // 加载失败
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     
-    [DgameUtils showMessage:@"加载失败，请检查网络"]
+    [DgameUtils showMessage:@"加载失败，请检查网络"];
     [self hideLoading];
 }
 

@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "DgameSdk.h"
 #import "DgameUtils.h"
-#import "UIView+FSLoading.h"
+
+
 
 @interface AcountManagerViewController : UIViewController<UIWebViewDelegate>
 

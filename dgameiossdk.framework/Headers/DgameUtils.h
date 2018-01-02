@@ -41,4 +41,6 @@
 + (BOOL)checkPassword:(NSString*) password;
 + (BOOL)checkisPhone:(NSString*) phonenumber;
 +(NSString *)getTime;
++(void)startLoading:(UIView *)mView andMessage:(NSString *)msg;
++(void)stopLoading:(UIView *)mView ;
 @end

@@ -8,7 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		183ABBEE1FF4D8EA00516A7E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183ABBED1FF4D8EA00516A7E /* StoreKit.framework */; };
-		1840EC201FF744B600D6D38E /* dgameiossdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1840EC1F1FF744B600D6D38E /* dgameiossdk.framework */; };
+		184B17201FFB1F420067C8DB /* dgameassets in Resources */ = {isa = PBXBuildFile; fileRef = 184B171F1FFB1F420067C8DB /* dgameassets */; };
+		184B17261FFB63870067C8DB /* dgameiossdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184B17251FFB63870067C8DB /* dgameiossdk.framework */; };
+		184B17431FFB7F440067C8DB /* GameSdk.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B173C1FFB7F440067C8DB /* GameSdk.m */; };
+		184B17441FFB7F440067C8DB /* GameSdkOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B173E1FFB7F440067C8DB /* GameSdkOrder.m */; };
+		184B17451FFB7F440067C8DB /* GameSdkRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B17401FFB7F440067C8DB /* GameSdkRole.m */; };
+		184B17461FFB7F440067C8DB /* GameSdkUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B17421FFB7F440067C8DB /* GameSdkUser.m */; };
+		184B17491FFBB6B30067C8DB /* KgameStringConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B17481FFBB6B30067C8DB /* KgameStringConstants.m */; };
 		7604B8631FC4703200BFFAD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B8621FC4703200BFFAD5 /* main.m */; };
 		7604B8661FC4703200BFFAD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B8651FC4703200BFFAD5 /* AppDelegate.m */; };
 		7604B8691FC4703200BFFAD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B8681FC4703200BFFAD5 /* ViewController.m */; };
@@ -17,7 +23,6 @@
 		7604B8711FC4703200BFFAD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7604B86F1FC4703200BFFAD5 /* LaunchScreen.storyboard */; };
 		7604B87C1FC4703200BFFAD5 /* ddgamedemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B87B1FC4703200BFFAD5 /* ddgamedemoTests.m */; };
 		7604B8871FC4703200BFFAD5 /* ddgamedemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B8861FC4703200BFFAD5 /* ddgamedemoUITests.m */; };
-		76BDE0571FC98C9F0077A90E /* dgameassets in Resources */ = {isa = PBXBuildFile; fileRef = 76BDE0561FC98C9F0077A90E /* dgameassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +59,18 @@
 /* Begin PBXFileReference section */
 		183777B41FF67959000FBBBD /* dgameiossdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = dgameiossdk.xcodeproj; path = dgameiossdk/dgameiossdk.xcodeproj; sourceTree = "<group>"; };
 		183ABBED1FF4D8EA00516A7E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		1840EC1F1FF744B600D6D38E /* dgameiossdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = dgameiossdk.framework; sourceTree = "<group>"; };
+		184B171F1FFB1F420067C8DB /* dgameassets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dgameassets; sourceTree = "<group>"; };
+		184B17251FFB63870067C8DB /* dgameiossdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = dgameiossdk.framework; sourceTree = "<group>"; };
+		184B173B1FFB7F440067C8DB /* GameSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSdk.h; sourceTree = "<group>"; };
+		184B173C1FFB7F440067C8DB /* GameSdk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSdk.m; sourceTree = "<group>"; };
+		184B173D1FFB7F440067C8DB /* GameSdkOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSdkOrder.h; sourceTree = "<group>"; };
+		184B173E1FFB7F440067C8DB /* GameSdkOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSdkOrder.m; sourceTree = "<group>"; };
+		184B173F1FFB7F440067C8DB /* GameSdkRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSdkRole.h; sourceTree = "<group>"; };
+		184B17401FFB7F440067C8DB /* GameSdkRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSdkRole.m; sourceTree = "<group>"; };
+		184B17411FFB7F440067C8DB /* GameSdkUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSdkUser.h; sourceTree = "<group>"; };
+		184B17421FFB7F440067C8DB /* GameSdkUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSdkUser.m; sourceTree = "<group>"; };
+		184B17471FFBB6B30067C8DB /* KgameStringConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KgameStringConstants.h; sourceTree = "<group>"; };
+		184B17481FFBB6B30067C8DB /* KgameStringConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KgameStringConstants.m; sourceTree = "<group>"; };
 		7604B85E1FC4703200BFFAD5 /* ddgamedemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddgamedemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7604B8621FC4703200BFFAD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7604B8641FC4703200BFFAD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,7 +87,6 @@
 		7604B8821FC4703200BFFAD5 /* ddgamedemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ddgamedemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7604B8861FC4703200BFFAD5 /* ddgamedemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ddgamedemoUITests.m; sourceTree = "<group>"; };
 		7604B8881FC4703200BFFAD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76BDE0561FC98C9F0077A90E /* dgameassets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dgameassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1840EC201FF744B600D6D38E /* dgameiossdk.framework in Frameworks */,
+				184B17261FFB63870067C8DB /* dgameiossdk.framework in Frameworks */,
 				183ABBEE1FF4D8EA00516A7E /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,7 +136,7 @@
 		7604B8551FC4703200BFFAD5 = {
 			isa = PBXGroup;
 			children = (
-				1840EC1F1FF744B600D6D38E /* dgameiossdk.framework */,
+				184B17251FFB63870067C8DB /* dgameiossdk.framework */,
 				183777B41FF67959000FBBBD /* dgameiossdk.xcodeproj */,
 				7604B8601FC4703200BFFAD5 /* ddgamedemo */,
 				7604B87A1FC4703200BFFAD5 /* ddgamedemoTests */,
@@ -144,7 +159,15 @@
 		7604B8601FC4703200BFFAD5 /* ddgamedemo */ = {
 			isa = PBXGroup;
 			children = (
-				76BDE0561FC98C9F0077A90E /* dgameassets */,
+				184B173B1FFB7F440067C8DB /* GameSdk.h */,
+				184B173C1FFB7F440067C8DB /* GameSdk.m */,
+				184B173D1FFB7F440067C8DB /* GameSdkOrder.h */,
+				184B173E1FFB7F440067C8DB /* GameSdkOrder.m */,
+				184B173F1FFB7F440067C8DB /* GameSdkRole.h */,
+				184B17401FFB7F440067C8DB /* GameSdkRole.m */,
+				184B17411FFB7F440067C8DB /* GameSdkUser.h */,
+				184B17421FFB7F440067C8DB /* GameSdkUser.m */,
+				184B171F1FFB1F420067C8DB /* dgameassets */,
 				7604B8641FC4703200BFFAD5 /* AppDelegate.h */,
 				7604B8651FC4703200BFFAD5 /* AppDelegate.m */,
 				7604B8671FC4703200BFFAD5 /* ViewController.h */,
@@ -154,6 +177,8 @@
 				7604B86F1FC4703200BFFAD5 /* LaunchScreen.storyboard */,
 				7604B8721FC4703200BFFAD5 /* Info.plist */,
 				7604B8611FC4703200BFFAD5 /* Supporting Files */,
+				184B17471FFBB6B30067C8DB /* KgameStringConstants.h */,
+				184B17481FFBB6B30067C8DB /* KgameStringConstants.m */,
 			);
 			path = ddgamedemo;
 			sourceTree = "<group>";
@@ -319,7 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76BDE0571FC98C9F0077A90E /* dgameassets in Resources */,
+				184B17201FFB1F420067C8DB /* dgameassets in Resources */,
 				7604B8711FC4703200BFFAD5 /* LaunchScreen.storyboard in Resources */,
 				7604B86E1FC4703200BFFAD5 /* Assets.xcassets in Resources */,
 				7604B86C1FC4703200BFFAD5 /* Main.storyboard in Resources */,
@@ -347,9 +372,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184B17451FFB7F440067C8DB /* GameSdkRole.m in Sources */,
+				184B17461FFB7F440067C8DB /* GameSdkUser.m in Sources */,
+				184B17491FFBB6B30067C8DB /* KgameStringConstants.m in Sources */,
+				184B17431FFB7F440067C8DB /* GameSdk.m in Sources */,
 				7604B8691FC4703200BFFAD5 /* ViewController.m in Sources */,
 				7604B8661FC4703200BFFAD5 /* AppDelegate.m in Sources */,
 				7604B8631FC4703200BFFAD5 /* main.m in Sources */,
+				184B17441FFB7F440067C8DB /* GameSdkOrder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +567,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ddgamedemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.doudouyule.ddgamedemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -549,6 +580,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ddgamedemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.doudouyule.ddgamedemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

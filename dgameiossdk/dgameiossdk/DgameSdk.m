@@ -39,8 +39,7 @@ static DgameSdk *mdgamesdk=nil;
 
 - (void) DgameOnlineHelperinitSDKWithListener:(id) delegate{
     _mInitdelegate=delegate;
-    _mLogindelegate=delegate;
-    _mPaydelegate=delegate;
+  
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     ////发送二进制form数据 key=value&key2=value2
@@ -57,6 +56,7 @@ static DgameSdk *mdgamesdk=nil;
     [defaults synchronize];//用synchronize方法把数据持久化到
     
     [DgameUtils setNSUserDefaultskey:@"app_id" andValue:APPID];
+    [DgameUtils setNSUserDefaultskey:@"idfa" andValue:IDFA];
     
     
     // NSMutableDictionary *parameters = @{@"idfa":IDFA,@"app_id":APPID};
@@ -162,8 +162,9 @@ static DgameSdk *mdgamesdk=nil;
 }
 
 //登陆账号
-- (void) login:(NSString *) remain{
-    
+- (void) login:(NSString *) remain withLoginListener:(id)logindelegate{
+    _mLogindelegate=logindelegate;
+   
     LoginViewController *loginView = [[LoginViewController alloc]init];
     _vc = [UIApplication sharedApplication].windows[0].rootViewController;
     
@@ -189,6 +190,10 @@ static DgameSdk *mdgamesdk=nil;
 
 //支付方法
 -(void) pay:(NSString *) unitPrice andName:(NSString *) goodName andExtinfo:(NSString *) extinfo andOrderid:(NSString *) orderid withPayListener:(id) paydelegate{
+    
+    
+    _mPaydelegate=paydelegate;
+    
     _morder=[[DgameOrder alloc] init];
     
     _morder.price=unitPrice;
@@ -444,7 +449,9 @@ static DgameSdk *mdgamesdk=nil;
 
 //支付成功回调
 -(void) onPaySuccess : (NSString*) msg{
-    [_mPaydelegate onSuccess:msg];
+    
+    NSDictionary *kmsg = @{@"msg":msg,@"price":_morder.price,@"cporderid":_morder.cporderid,@"dgameorderid":_morder.dgameorderid};
+    [_mPaydelegate onSuccess:[DgameUtils dictionaryToJson:kmsg]];
     [_vc dismissViewControllerAnimated:YES completion:nil];
 }
 //支付失败回调
@@ -452,10 +459,6 @@ static DgameSdk *mdgamesdk=nil;
     [_mPaydelegate onFailed:msg];
     [_vc dismissViewControllerAnimated:YES completion:nil];
 }
-//订单号
--(void) onPayOderNo:(NSString*) msg{
-    [_mPaydelegate onOderNo:msg];
-    [_vc dismissViewControllerAnimated:YES completion:nil];
-}
+
 
 @end
