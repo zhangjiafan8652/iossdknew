@@ -59,7 +59,7 @@
 
 @property (nonatomic,strong)  GameSdkRole *mRole;
 
-
+@property (nonatomic,strong)  GameSdkUser *mUser;
 
 
 

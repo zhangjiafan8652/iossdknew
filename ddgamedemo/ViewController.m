@@ -20,10 +20,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [[DgameSdk Instance] DgameOnlineHelperinitSDKWithListener:self];
+    [[GameSdk Instance] GameSdkinitSDKWithListener:self];
     NSLog(@"VIEWDIDLOAD初始化后");
     self.view.backgroundColor=[UIColor blackColor];
-   
+  // /Users/apple/Desktop/lingshiwenjian/iossdknew/ddgamedemo
    // [self startLoading:self.view andMessage:@"正在加载..."];
     
     
@@ -41,15 +41,17 @@
 
 - (IBAction)loginViewClick:(id)sender {
     NSLog(@"点击登录了");
-    [[DgameSdk Instance] login:@"传奇世界" withLoginListener:self];
+   // [[DgameSdk Instance] login:@"传奇世界" withLoginListener:self];
     //[[DgameSdk Instance] login:@"测试"];
+    [[GameSdk Instance] GameSdklogin:@"传奇世界" withLoginListener:self];
     
 }
 - (IBAction)PayViewClick:(id)sender {
     NSLog(@"点击支付了");
    // [[DgameSdk Instance] login:@"测试"];
-    [[DgameSdk Instance] pay:@"3000" andName:@"冰霜之剑" andExtinfo:@"透传参数" andOrderid:@"321123321"withPayListener:self];
+    [[GameSdk Instance] GameSdkpay:@"3000" andName:@"冰霜之剑" andExtinfo:@"透传参数" andOrderid:@"321123321" withPayListener:self];
 //[self stopLoading:self.view ];
+   
 }
 
 
@@ -64,7 +66,7 @@
     NSDictionary *parametersDemo = @{@"roleId":@"123",@"roleName":@"jiafan",@"roleLevel":@"12",@"zoneId":@"1",@"zoneName":@"jiafan"};
     NSString *string=[DgameUtils dictionaryToJson:parametersDemo];
     
-    [[DgameSdk Instance] DgameOnlineHelpersetRoleData:string];
+    [[GameSdk Instance] GameSdksetRoleData:string];
 }
 
 
@@ -81,12 +83,12 @@
 
 
 -(void) onSuccess : (NSString*) msg{
-    NSLog(@"支付成功%@",msg);
-    [DgameUtils showMessage:msg];
+    NSLog(@"Viewcontrollerzhong支付成功%@",msg);
+    //[DgameUtils showMessage:msg];
 }//支付成功回调
 
 -(void) onFailed : (NSString*) msg{
-     NSLog(@"支付失败");
+     NSLog(@"Viewcontrollerzhong支付失败");
     [DgameUtils showMessage:@"游戏支付失败"];
 }//支付失败回调
 

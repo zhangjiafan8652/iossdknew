@@ -65,8 +65,6 @@
 		1837782A1FF67B37000FBBBD /* WToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 183777F31FF67B37000FBBBD /* WToast.m */; };
 		184B17291FFB7B820067C8DB /* BufanGameProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 184B17271FFB7B820067C8DB /* BufanGameProxy.h */; };
 		184B172A1FFB7B820067C8DB /* BufanGameProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B17281FFB7B820067C8DB /* BufanGameProxy.m */; };
-		184B172D1FFB7CAD0067C8DB /* GameSdk.h in Headers */ = {isa = PBXBuildFile; fileRef = 184B172B1FFB7CAD0067C8DB /* GameSdk.h */; };
-		184B172E1FFB7CAD0067C8DB /* GameSdk.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B172C1FFB7CAD0067C8DB /* GameSdk.m */; };
 		184B17351FFB7E570067C8DB /* GameSdkOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 184B172F1FFB7E570067C8DB /* GameSdkOrder.h */; };
 		184B17361FFB7E570067C8DB /* GameSdkOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B17301FFB7E570067C8DB /* GameSdkOrder.m */; };
 		184B17371FFB7E570067C8DB /* GameSdkRole.h in Headers */ = {isa = PBXBuildFile; fileRef = 184B17311FFB7E570067C8DB /* GameSdkRole.h */; };
@@ -147,8 +145,6 @@
 		183777F31FF67B37000FBBBD /* WToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WToast.m; sourceTree = "<group>"; };
 		184B17271FFB7B820067C8DB /* BufanGameProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufanGameProxy.h; sourceTree = "<group>"; };
 		184B17281FFB7B820067C8DB /* BufanGameProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BufanGameProxy.m; sourceTree = "<group>"; };
-		184B172B1FFB7CAD0067C8DB /* GameSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSdk.h; sourceTree = "<group>"; };
-		184B172C1FFB7CAD0067C8DB /* GameSdk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSdk.m; sourceTree = "<group>"; };
 		184B172F1FFB7E570067C8DB /* GameSdkOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSdkOrder.h; sourceTree = "<group>"; };
 		184B17301FFB7E570067C8DB /* GameSdkOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSdkOrder.m; sourceTree = "<group>"; };
 		184B17311FFB7E570067C8DB /* GameSdkRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSdkRole.h; sourceTree = "<group>"; };
@@ -260,8 +256,6 @@
 				1837779E1FF67958000FBBBD /* Info.plist */,
 				184B17271FFB7B820067C8DB /* BufanGameProxy.h */,
 				184B17281FFB7B820067C8DB /* BufanGameProxy.m */,
-				184B172B1FFB7CAD0067C8DB /* GameSdk.h */,
-				184B172C1FFB7CAD0067C8DB /* GameSdk.m */,
 			);
 			path = dgameiossdk;
 			sourceTree = "<group>";
@@ -314,7 +308,6 @@
 				183778011FF67B37000FBBBD /* AFURLResponseSerialization.h in Headers */,
 				183777AB1FF67959000FBBBD /* dgameiossdk.h in Headers */,
 				183777FA1FF67B37000FBBBD /* AFNetworking.h in Headers */,
-				184B172D1FFB7CAD0067C8DB /* GameSdk.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +436,6 @@
 				1837781A1FF67B37000FBBBD /* LoginViewController.m in Sources */,
 				184B17361FFB7E570067C8DB /* GameSdkOrder.m in Sources */,
 				183778021FF67B37000FBBBD /* AFURLResponseSerialization.m in Sources */,
-				184B172E1FFB7CAD0067C8DB /* GameSdk.m in Sources */,
 				1837780C1FF67B37000FBBBD /* DgamePayViewController.m in Sources */,
 				183778241FF67B37000FBBBD /* PhoneRegisterViewController.m in Sources */,
 				183777F51FF67B37000FBBBD /* AccountRegisterViewController.m in Sources */,

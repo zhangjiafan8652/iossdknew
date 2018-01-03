@@ -12,6 +12,6 @@
 
 
 extern NSString * const unionloginurl;
-extern NSString * const registerurl;
+extern NSString * const kgameunionmakeorder;
 
 @end

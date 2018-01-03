@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <dgameiossdk/DgameUtils.h>
-#import <dgameiossdk/DgameSdk.h>
-#import <dgameiossdk/MF_Base64Additions.h>
 
 
-@interface ViewController : UIViewController<DgameOnlineInitDelegate,DgameOnlineLoginDelegate,DgameOnlinePayResultDelegate>
+#import "GameSdk.h"
+
+
+@interface ViewController : UIViewController<GameSdkLoginDelegate,GameSdkInitDelegate,GameSdkPayResultDelegate>
 
 
 @end
