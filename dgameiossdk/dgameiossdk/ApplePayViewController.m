@@ -240,6 +240,11 @@ static const NSInteger PRETAG =601;
     NSArray *myProduct = response.products;
     NSLog(@"产品Product ID:%@", response.invalidProductIdentifiers);
     NSLog(@"产品付费数量: %d", (int) [myProduct count]);
+    
+    if ((int) [myProduct count]==0) {
+        [self onPayFail:@"无产品信息"];
+        return;
+    }
     // populate UI
     for (SKProduct *product in myProduct) {
        

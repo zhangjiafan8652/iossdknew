@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		183ABBEE1FF4D8EA00516A7E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183ABBED1FF4D8EA00516A7E /* StoreKit.framework */; };
 		184B17201FFB1F420067C8DB /* dgameassets in Resources */ = {isa = PBXBuildFile; fileRef = 184B171F1FFB1F420067C8DB /* dgameassets */; };
-		184B17261FFB63870067C8DB /* dgameiossdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184B17251FFB63870067C8DB /* dgameiossdk.framework */; };
 		184B17431FFB7F440067C8DB /* GameSdk.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B173C1FFB7F440067C8DB /* GameSdk.m */; };
 		184B17441FFB7F440067C8DB /* GameSdkOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B173E1FFB7F440067C8DB /* GameSdkOrder.m */; };
 		184B17451FFB7F440067C8DB /* GameSdkRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B17401FFB7F440067C8DB /* GameSdkRole.m */; };
 		184B17461FFB7F440067C8DB /* GameSdkUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B17421FFB7F440067C8DB /* GameSdkUser.m */; };
 		184B17491FFBB6B30067C8DB /* KgameStringConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B17481FFBB6B30067C8DB /* KgameStringConstants.m */; };
+		189310381FFF86650037373E /* dgameiossdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189310371FFF86650037373E /* dgameiossdk.framework */; };
 		7604B8631FC4703200BFFAD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B8621FC4703200BFFAD5 /* main.m */; };
 		7604B8661FC4703200BFFAD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B8651FC4703200BFFAD5 /* AppDelegate.m */; };
 		7604B8691FC4703200BFFAD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7604B8681FC4703200BFFAD5 /* ViewController.m */; };
@@ -60,7 +60,6 @@
 		183777B41FF67959000FBBBD /* dgameiossdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = dgameiossdk.xcodeproj; path = dgameiossdk/dgameiossdk.xcodeproj; sourceTree = "<group>"; };
 		183ABBED1FF4D8EA00516A7E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		184B171F1FFB1F420067C8DB /* dgameassets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dgameassets; sourceTree = "<group>"; };
-		184B17251FFB63870067C8DB /* dgameiossdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = dgameiossdk.framework; sourceTree = "<group>"; };
 		184B173B1FFB7F440067C8DB /* GameSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSdk.h; sourceTree = "<group>"; };
 		184B173C1FFB7F440067C8DB /* GameSdk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSdk.m; sourceTree = "<group>"; };
 		184B173D1FFB7F440067C8DB /* GameSdkOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSdkOrder.h; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		184B17421FFB7F440067C8DB /* GameSdkUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSdkUser.m; sourceTree = "<group>"; };
 		184B17471FFBB6B30067C8DB /* KgameStringConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KgameStringConstants.h; sourceTree = "<group>"; };
 		184B17481FFBB6B30067C8DB /* KgameStringConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KgameStringConstants.m; sourceTree = "<group>"; };
+		189310371FFF86650037373E /* dgameiossdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = dgameiossdk.framework; sourceTree = "<group>"; };
 		7604B85E1FC4703200BFFAD5 /* ddgamedemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddgamedemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7604B8621FC4703200BFFAD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7604B8641FC4703200BFFAD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184B17261FFB63870067C8DB /* dgameiossdk.framework in Frameworks */,
+				189310381FFF86650037373E /* dgameiossdk.framework in Frameworks */,
 				183ABBEE1FF4D8EA00516A7E /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +136,7 @@
 		7604B8551FC4703200BFFAD5 = {
 			isa = PBXGroup;
 			children = (
-				184B17251FFB63870067C8DB /* dgameiossdk.framework */,
+				189310371FFF86650037373E /* dgameiossdk.framework */,
 				183777B41FF67959000FBBBD /* dgameiossdk.xcodeproj */,
 				7604B8601FC4703200BFFAD5 /* ddgamedemo */,
 				7604B87A1FC4703200BFFAD5 /* ddgamedemoTests */,

@@ -179,16 +179,24 @@ static const NSInteger PRETAG =501;
     NSString* reqUrl = request.URL.absoluteString;
     NSLog(@"当前加载的url：%@",reqUrl);
     //YWxpcGF5Oi8v
-    NSString *zhifubaostart1=[NSString stringFromBase64String:@"YWxpcGF5czovLw=="];//生成支付解密字符串
-     NSString *zhifubaostart2=[NSString stringFromBase64String:@"YWxpcGF5Oi8v"];//生成支付解密字符串
+    NSString *zhifubaostart1=[DgameUtils dencode:@"YWxpcGF5czovLw=="];//生成支付解密字符串
+    NSLog(@"zhifubaostart1=：%@",zhifubaostart1);
+
+     NSString *zhifubaostart2=[DgameUtils dencode:@"YWxpcGF5Oi8v"];//生成支付解密字符串
+    NSLog(@"zhifubaostart2=：%@",zhifubaostart2);
     //
-    NSString *zhifubaosuccess=[NSString stringFromBase64String:@"Ly9wYXlzdWNjZXNz"];//生成支付解密字符串
-     NSString *weixinstart=[NSString stringFromBase64String:@"d2VpeGluOi8v"];//生产支付微信解密字符串
+    NSString *zhifubaosuccess=[DgameUtils dencode:@"Ly9wYXlzdWNjZXNz"];//生成支付解密字符串
+    NSLog(@"zhifubaosuccess=：%@",zhifubaosuccess);
+    //d2VpeGluOi8v
+     NSString *weixinstart=[DgameUtils dencode:@"d2VpeGluOi8v"];//生产支付微信解密字符串
+     NSLog(@"weixinstart=：%@",weixinstart);
     //weixin://
     if ([reqUrl hasPrefix:zhifubaostart1] || [reqUrl hasPrefix:zhifubaostart2]) {
         BOOL bSucc = [[UIApplication sharedApplication]openURL:request.URL];
+        NSLog(@"已经吊起支付");
         //bSucc是否成功调起支付宝
     }else if([reqUrl containsString:zhifubaosuccess]){
+         NSLog(@"支付成功");
         [[DgameSdk Instance] onPaySuccess:@"支付成功"];
     
     }else if([reqUrl containsString:weixinstart]){

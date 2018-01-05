@@ -51,8 +51,6 @@
 		1837781A1FF67B37000FBBBD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183777E31FF67B37000FBBBD /* LoginViewController.m */; };
 		1837781B1FF67B37000FBBBD /* LZFloatWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 183777E41FF67B37000FBBBD /* LZFloatWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1837781C1FF67B37000FBBBD /* LZFloatWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 183777E51FF67B37000FBBBD /* LZFloatWindow.m */; };
-		1837781D1FF67B37000FBBBD /* MF_Base64Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 183777E61FF67B37000FBBBD /* MF_Base64Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1837781E1FF67B37000FBBBD /* MF_Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 183777E71FF67B37000FBBBD /* MF_Base64Additions.m */; };
 		1837781F1FF67B37000FBBBD /* NSDictionary+XHLogHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 183777E81FF67B37000FBBBD /* NSDictionary+XHLogHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		183778201FF67B37000FBBBD /* NSDictionary+XHLogHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 183777E91FF67B37000FBBBD /* NSDictionary+XHLogHelper.m */; };
 		183778211FF67B37000FBBBD /* PayWebViewViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 183777EA1FF67B37000FBBBD /* PayWebViewViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -131,8 +129,6 @@
 		183777E31FF67B37000FBBBD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		183777E41FF67B37000FBBBD /* LZFloatWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFloatWindow.h; sourceTree = "<group>"; };
 		183777E51FF67B37000FBBBD /* LZFloatWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZFloatWindow.m; sourceTree = "<group>"; };
-		183777E61FF67B37000FBBBD /* MF_Base64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MF_Base64Additions.h; sourceTree = "<group>"; };
-		183777E71FF67B37000FBBBD /* MF_Base64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MF_Base64Additions.m; sourceTree = "<group>"; };
 		183777E81FF67B37000FBBBD /* NSDictionary+XHLogHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+XHLogHelper.h"; sourceTree = "<group>"; };
 		183777E91FF67B37000FBBBD /* NSDictionary+XHLogHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+XHLogHelper.m"; sourceTree = "<group>"; };
 		183777EA1FF67B37000FBBBD /* PayWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayWebViewViewController.h; sourceTree = "<group>"; };
@@ -240,8 +236,6 @@
 				183777E31FF67B37000FBBBD /* LoginViewController.m */,
 				183777E41FF67B37000FBBBD /* LZFloatWindow.h */,
 				183777E51FF67B37000FBBBD /* LZFloatWindow.m */,
-				183777E61FF67B37000FBBBD /* MF_Base64Additions.h */,
-				183777E71FF67B37000FBBBD /* MF_Base64Additions.m */,
 				183777E81FF67B37000FBBBD /* NSDictionary+XHLogHelper.h */,
 				183777E91FF67B37000FBBBD /* NSDictionary+XHLogHelper.m */,
 				183777EA1FF67B37000FBBBD /* PayWebViewViewController.h */,
@@ -303,7 +297,6 @@
 				184B17351FFB7E570067C8DB /* GameSdkOrder.h in Headers */,
 				1837780D1FF67B37000FBBBD /* DgameRole.h in Headers */,
 				183777FD1FF67B37000FBBBD /* AFSecurityPolicy.h in Headers */,
-				1837781D1FF67B37000FBBBD /* MF_Base64Additions.h in Headers */,
 				1837781F1FF67B37000FBBBD /* NSDictionary+XHLogHelper.h in Headers */,
 				183778011FF67B37000FBBBD /* AFURLResponseSerialization.h in Headers */,
 				183777AB1FF67959000FBBBD /* dgameiossdk.h in Headers */,
@@ -429,7 +422,6 @@
 				183778081FF67B37000FBBBD /* DgameAppDelegae.m in Sources */,
 				183778061FF67B37000FBBBD /* ApplePayViewController.m in Sources */,
 				183778261FF67B37000FBBBD /* StringConstants.m in Sources */,
-				1837781E1FF67B37000FBBBD /* MF_Base64Additions.m in Sources */,
 				183778181FF67B37000FBBBD /* FSLoading.m in Sources */,
 				183778161FF67B37000FBBBD /* DYYFloatWindow.m in Sources */,
 				184B172A1FFB7B820067C8DB /* BufanGameProxy.m in Sources */,

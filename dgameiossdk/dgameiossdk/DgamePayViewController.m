@@ -92,7 +92,7 @@ static const NSInteger ZHIFUPAY =5;
     UILabel *goodnamelabe= [[UILabel alloc]init];
     goodnamelabe.frame=CGRectMake([DgameUtils RealSizeWith:220],[DgameUtils RealSizeheight:120]
                                  , [DgameUtils RealSizeWith:200],[DgameUtils RealSizeheight:40]);
-    goodnamelabe.text=@"元宝";
+    goodnamelabe.text=[DgameSdk Instance].morder.goodname;
     goodnamelabe.textColor=[UIColor grayColor];
     goodnamelabe.textAlignment = NSTextAlignmentCenter;
     
@@ -102,7 +102,10 @@ static const NSInteger ZHIFUPAY =5;
     UILabel *moneylabe= [[UILabel alloc]init];
     moneylabe.frame=CGRectMake([DgameUtils RealSizeWith:220],[DgameUtils RealSizeheight:160]
                                   , [DgameUtils RealSizeWith:200],[DgameUtils RealSizeheight:70]);
-    moneylabe.text=@"￥365.00";
+       int intString = [[DgameSdk Instance].morder.price intValue];
+    int k=intString/100;
+    NSString *pricetext=[[NSString alloc] initWithFormat:@"￥%d.00",k];
+    moneylabe.text=pricetext;
     moneylabe.textColor=[DgameUtils colorWithHexString:@"#0081EF" ];
     
     moneylabe.textAlignment = NSTextAlignmentCenter;

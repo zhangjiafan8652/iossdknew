@@ -43,4 +43,6 @@
 +(NSString *)getTime;
 +(void)startLoading:(UIView *)mView andMessage:(NSString *)msg;
 +(void)stopLoading:(UIView *)mView ;
++ (NSString *)dencode:(NSString *)base64String;
++ (NSString *)encode:(NSString *)string;
 @end

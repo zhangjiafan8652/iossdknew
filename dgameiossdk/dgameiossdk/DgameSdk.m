@@ -61,7 +61,8 @@ static DgameSdk *mdgamesdk=nil;
     
     // NSMutableDictionary *parameters = @{@"idfa":IDFA,@"app_id":APPID};
     //  NSMutableDictionary *dic2 = [NSMutableDictionary dictionaryWithObjectsAndKeys:IDFA,@"idfa",APPID,@"app_id",nil];
-    NSLog(@"idfa%@",IDFA);
+    NSLog(@"idfa%@",[DgameUtils getNSUserDefaultsBykey:@"idfa"]
+);
     NSLog(@"appid%@",APPID);
     NSLog(@"appid%@",active);
     NSDictionary *parametersDemo = @{@"idfa":IDFA,@"app_id":APPID};
@@ -450,7 +451,7 @@ static DgameSdk *mdgamesdk=nil;
 //支付成功回调
 -(void) onPaySuccess : (NSString*) msg{
     
-    NSDictionary *kmsg = @{@"msg":msg,@"price":_morder.price,@"cporderid":_morder.cporderid,@"dgameorderid":_morder.dgameorderid};
+    NSDictionary *kmsg = @{@"msg":msg,@"price":_morder.price,@"cporderid":_morder.cporderid};
     [_mPaydelegate onSuccess:[DgameUtils dictionaryToJson:kmsg]];
     [_vc dismissViewControllerAnimated:YES completion:nil];
 }

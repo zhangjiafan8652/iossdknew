@@ -9,7 +9,7 @@
 #import "DgameUtils.h"
 
 #import "DgameSdk.h"
-#import "MF_Base64Additions.h"
+
 
 @interface PayWebViewViewController : UIViewController<UIWebViewDelegate>
 
